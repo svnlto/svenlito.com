@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import replace from 'string-replace-to-array';
 
-import { breakpoint } from '../vars';
+import { breakpoint, color } from '../vars';
 
 import Container from '../components/Container';
 import Column from '../components/Column';
@@ -18,8 +18,7 @@ const styles = {
     }
   },
   underline: {
-    // textDecorationColor: '#e4b660',
-    textDecorationColor: 'pink',
+    textDecorationColor: color.pink,
     textDecorationLine: 'underline',
     textDecorationSkip: 'ink'
   },
@@ -40,7 +39,7 @@ const Hero = (props) => {
   if (keywords) {
     const reg = new RegExp(keywords.join('|'), 'gi');
     withKeywords = replace(props.headline, reg, (word) => (
-      <span style={styles.underline} >{word}</span>
+      <span key={word} style={styles.underline}>{word}</span>
     ));
   }
 
@@ -49,9 +48,11 @@ const Hero = (props) => {
       <Column width='full'>
         <div style={styles.hero}>
           <h1>{props.keywords ? withKeywords : headline}</h1>
-          {props.link && <span style={styles.link}>
-            <AnchorLink link={props.link} text={props.text} />
-          </span>}
+          {props.link &&
+            <span style={styles.link}>
+              <AnchorLink link={props.link} text={props.text} />
+            </span>
+          }
         </div>
       </Column>
     </Container>
