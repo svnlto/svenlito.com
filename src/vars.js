@@ -35,7 +35,7 @@ export const type = {
 
   fontRegular: 'normal',
   fontBold: 'bold',
-  fontMono: 'apercu_promono, monospace',
+  fontMono: 'Inconsolata, monospace',
   fontSans: 'apercu, sans-serif',
 
   bodySize: '18px',
