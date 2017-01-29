@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { color } from '../vars';
+import { colors } from '../vars';
 
 const styles = {
   block: {
@@ -23,14 +23,6 @@ const styles = {
 
   white: {
     color: 'white'
-  },
-  experiments: {
-    ':hover': {
-      borderColor: color.black,
-      backgroundColor: color.black,
-      color: color.experiments,
-      opacity: 1
-    }
   },
 
   topBottom: {

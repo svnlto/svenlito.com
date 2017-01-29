@@ -1,29 +1,31 @@
-import { lightness, color as co } from 'kewler';
+import color from 'color';
 
-const black = co('#23282c');
-const green = co('#2b9a81');
-const greenLight10 = green(lightness(10));
-const gray = co('#77797B');
-const grayLight10 = gray(lightness(10));
-const grayDark10 = gray(lightness(-20));
-const white = co('#e8e8e8');
-const whiteDark10 = white(lightness(-10));
-const pink = co('#efafe7');
-const orange = co('#e4b660');
+const gray = color('#77797B').string();
+const white = color('#e8e8e8').string();
+const pink = color('#efafe7').string();
+const orange = color('#e4b660').string();
+const black = color('#23282c').string();
+const green = color('#2b9a81').string();
+const blackHighlight = color('rgba(17, 20, 21, .7)').string();
+
+const greenLight10 = color(green).lighten(0.1).string();
+const lightGray = color(gray).lighten(1.0).string();
+const darkGray = color(gray).darken(0.2).string();
+const whiteDark10 = color(white).lighten(0.1).string();
 
 // Colours
-export const color = {
-  white: white(),
-  whiteDark10: whiteDark10(),
-  gray: gray(),
-  darkGray: grayDark10(),
-  lightGray: grayLight10(),
-  black: black(),
-  green: green(),
-  greenLight10: greenLight10(),
-  blackVar: 'rgba(54,54,54,.2)',
-  pink: pink(),
-  orange: orange()
+export const colors = {
+  white,
+  whiteDark10,
+  gray,
+  darkGray,
+  lightGray,
+  black,
+  blackHighlight,
+  green,
+  greenLight10,
+  pink,
+  orange
 };
 
 // Typography
@@ -40,14 +42,14 @@ export const type = {
 
   fontRegular: 'normal',
   fontBold: 'bold',
-  fontMono: 'Inconsolata, monospace',
+  fontMono: 'iosevka, monospace',
   fontSans: 'apercu, sans-serif',
 
   bodySize: '18px',
   bodyWeight: 'normal'
 };
 
-// TODO: Layout  - maybe remove this...
+// Layout
 export const layout = {
   gutter: '20px',
   maxWidth: '1440px'
@@ -64,7 +66,7 @@ export const breakpoint = {
 export const nav = ['work', 'contact'];
 
 const vars = {
-  color,
+  colors,
   type,
   layout,
   breakpoint,

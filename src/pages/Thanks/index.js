@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { color } from '../../vars';
+import { colors } from '../../vars';
 
 import Hero from '../../components/Hero';
 import Container from '../../components/Container';
@@ -10,8 +10,8 @@ class Thanks extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.black,
-        secondary: color.white
+        primary: colors.black,
+        secondary: colors.white
       }
     };
     document.body.style.backgroundColor = this.state.theme.primary;

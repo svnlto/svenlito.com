@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import replace from 'string-replace-to-array';
 
-import { breakpoint, color } from '../vars';
+import { breakpoint, colors } from '../vars';
 
 import Container from '../components/Container';
 import Column from '../components/Column';
@@ -18,7 +18,7 @@ const styles = {
     }
   },
   underline: {
-    textDecorationColor: color.pink,
+    textDecorationColor: colors.pink,
     textDecorationLine: 'underline',
     textDecorationSkip: 'ink'
   },

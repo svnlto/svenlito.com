@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
 
-import { breakpoint, color, type } from '../vars';
+import { breakpoint, colors, type } from '../vars';
 
 const styles = {
   block: {
@@ -22,10 +22,10 @@ const styles = {
     }
   },
   inner: {
-    backgroundColor: color.blue,
+    backgroundColor: colors.green,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    color: color.white,
+    color: colors.white,
     overflow: 'hidden',
     transition: '0.2s'
   },

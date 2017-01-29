@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { color } from '../../vars';
+import { colors } from '../../vars';
 
 import Hero from '../../components/Hero';
 import ContactForm from '../../components/ContactForm';
@@ -13,8 +13,8 @@ class Contact extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.white,
-        secondary: color.black
+        primary: colors.white,
+        secondary: colors.black
       }
     };
     document.body.style.backgroundColor = this.state.theme.primary;

@@ -39,7 +39,7 @@ class ColorCursor extends Component {
     gradient.addColorStop(0, colorFrom);
     gradient.addColorStop(1, colorTo);
 
-    ctx.fillStyle = gradient;
+    ctx.fillStyle = 'pink';
     ctx.fillRect(0, 0, 15, 15);
 
     node.style.cursor = `url(${cursor.toDataURL()}), auto`;

@@ -6,7 +6,7 @@ import Container from './Container';
 import Column from './Column';
 
 import Nav from './Nav';
-import { color } from '../vars';
+import { colors } from '../vars';
 
 const blinkKeyframes = Radium.keyframes({
   '0%': { opacity: 1.0 },
@@ -34,7 +34,7 @@ const styles = {
   },
   heading: {
     fontWeight: 'lighter',
-    color: color.greenLight10
+    color: colors.greenLight10
   },
   typist: {
     animation: 'blink 1s linear 4s infinite',

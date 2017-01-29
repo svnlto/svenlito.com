@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { color } from '../vars';
+import { colors } from '../vars';
 
 const styles = {
   field: {
@@ -17,7 +17,7 @@ const styles = {
       opacity: '1',
       zIndex: '1',
       transform: 'scale(1.01)',
-      backgroundColor: color.white
+      backgroundColor: colors.white
     }
   },
   button: {
@@ -35,9 +35,9 @@ const styles = {
   },
   black: {
     ':hover': {
-      backgroundColor: color.white,
-      color: color.gray,
-      borderColor: color.black
+      backgroundColor: colors.white,
+      color: colors.gray,
+      borderColor: colors.black
     }
   }
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium, { Style } from 'radium';
 
-import { type } from './vars';
+import { type, colors } from './vars';
 
 const Styles = () =>
   <Style
@@ -9,6 +9,20 @@ const Styles = () =>
       html: {
         boxSizing: 'border-box',
         fontSize: type.bodySize
+      },
+      '.in-view': {
+        visibility: 'visible !important',
+        transition: 'all 1s ease-in-out'
+      },
+      '::-moz-selection': {
+        background: colors.green,
+        color: colors.white,
+        textShadow: 'none'
+      },
+      '::selection': {
+        background: colors.darkGray,
+        color: colors.white,
+        textShadow: 'none'
       },
       '*, *::before, *::after': {
         boxSizing: 'inherit',
@@ -73,7 +87,7 @@ const Styles = () =>
         maxWidth: '100%'
       },
       hr: {
-        backgroundColor: 'currentColor',
+        backgroundColor: colors.gray,
         marginTop: '10px',
         marginBottom: '60px',
         border: 'none',
