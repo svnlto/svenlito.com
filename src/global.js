@@ -94,9 +94,6 @@ const Styles = () =>
         height: '2px',
         opacity: '0.15'
       },
-      'svg path': {
-        fill: 'currentColor'
-      },
       mediaQueries: {
         '(min-width: 600px)': {
           h1: {
