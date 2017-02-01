@@ -88,7 +88,10 @@ Column.propTypes = {
   width: PropTypes.string,
   display: PropTypes.string,
   content: PropTypes.object,
-  children: PropTypes.object
+  children: PropTypes.oneOfType([
+    PropTypes.object.isRequired,
+    PropTypes.array.isRequired
+  ])
 };
 
 export default new Radium(Column);

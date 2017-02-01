@@ -36,7 +36,10 @@ class Container extends Component {
 }
 
 Container.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.object.isRequired,
+    PropTypes.array.isRequired
+  ])
 };
 
 
