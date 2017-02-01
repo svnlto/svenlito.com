@@ -33,10 +33,11 @@ class Home extends Component {
                 'Functional Programming',
                 'Full-Stack JavaScript Developer',
                 'Digital Arts',
-                'Distributed Systems'
+                'Distributed Systems',
+                'creating experiences'
               ]}
               link='/contact'
-              text='Available for freelance work'
+              text='Talk to me'
             />
           </Column>
         </Container>
