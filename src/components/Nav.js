@@ -10,6 +10,7 @@ const styles = {
   },
   link: {
     marginLeft: '10px',
+    display: 'inline',
 
     [breakpoint.medium]: {
       marginLeft: '20px'
@@ -18,29 +19,31 @@ const styles = {
   inner: {
     borderBottom: 'none',
     textTransform: 'capitalize'
+  },
+  active: {
+    borderBottom: '1px solid'
   }
 };
 
 const Nav = () => {
-  const active = { borderBottom: '1px solid' };
 
   const renderNav = (navItems) => {
-    return navItems.map((item, index) => {
-      return (
-        <span style={styles.link} key={index}>
-          <Link
-            style={styles.inner}
-            to={`/${item}`}
-            activeStyle={active}
-          >{item}</Link>
-        </span>
-      );
-    });
+    return navItems.map((item, index) => (
+      <li style={styles.link} key={index}>
+        <Link
+          style={styles.inner}
+          to={`/${item}`}
+          activeStyle={styles.active}
+        >{item}</Link>
+      </li>
+    ));
   };
 
   return (
     <nav style={styles.nav}>
-      {renderNav(nav)}
+      <ul>
+        {renderNav(nav)}
+      </ul>
     </nav>
   );
 };
