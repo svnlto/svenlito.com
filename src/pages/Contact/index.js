@@ -1,24 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import { colors } from '../../vars';
-
-import Hero from '../../components/Hero';
-import ContactForm from '../../components/ContactForm';
 
 import Container from '../../components/Container';
 import Column from '../../components/Column';
 
+import Hero from '../../components/Hero';
+import ContactForm from '../../components/ContactForm';
+
+import { setTheme } from '../../actions';
+
 class Contact extends Component {
 
   componentWillMount() {
-    this.state = {
-      theme: {
-        primary: colors.white,
-        secondary: colors.black
-      }
-    };
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    this.props.dispatch(setTheme({
+      primary: colors.black,
+      secondary: colors.whiteDark10
+    }));
+  }
+
+  componentWillReceiveProps(props) {
+    document.body.style.backgroundColor = props.theme.primary;
+    document.body.style.color = props.theme.secondary;
   }
 
   render() {
@@ -26,11 +30,11 @@ class Contact extends Component {
       <div>
         <Container>
           <Column width='full'>
-            <Hero headline='Talk to me.' />
+            <Hero headline='Get in touch.' />
             <Container>
               <Column
-                width='half'
-                title='Get in touch about your project or just say hello.'
+                width={'half'}
+                title="Let's talk about your project or send me a hello."
               />
               <Column width='half'>
                 <ContactForm color='white' />
@@ -43,4 +47,14 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+Contact.propTypes = {
+  theme: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
+};
+
+const select = (state) => {
+  const theme = state.app.theme;
+  return { theme };
+};
+
+export default connect(select)(Contact);

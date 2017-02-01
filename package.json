@@ -13,7 +13,9 @@
     "moment": "^2.17.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "react-redux": "^5.0.2",
     "react-router": "^2.4.1",
+    "redux": "^3.6.0",
     "string-replace-to-array": "^1.0.1"
   },
   "devDependencies": {
@@ -40,7 +42,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --host localhost --hot --inline --progress",
+    "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
     "clean": "rm -rf build/scripts",
     "build": "NODE_ENV=production webpack -p",
     "deploy": "now"

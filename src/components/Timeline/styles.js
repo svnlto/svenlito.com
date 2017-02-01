@@ -1,57 +1,18 @@
-import { color, breakpoint, type } from '../../vars';
+import { colors, type } from '../../vars';
 
 const styles = {
-  eventOdd: {
-    left: '45px'
-  },
-  eventEven: {
-    left: '-639px',
-
-    [breakpoint.small]: {
-      left: '45px'
-    }
-  },
-  event: {
+  wrapper: {
+    color: colors.gray,
     fontSize: type.epsilon,
-    position: 'relative',
-    width: '2px',
-    margin: '0 auto',
-    paddingTop: '50px',
-    background: color.darkGray,
-
-    [breakpoint.small]: {
-      marginLeft: '20px'
-    }
-  },
-  svgLine: {
-    position: 'relative',
-    width: '46px',
-    padding: 0,
-    height: '7px',
-    top: '36px'
-  },
-  svgLineEven: {
-    left: '-40px',
-    position: 'relative',
-    width: '40px',
-    padding: 0,
-    height: '7px',
-    top: '36px',
-  },
-  section: {
-    position: 'relative',
-    bottom: 0,
-    width: '600px',
-    padding: '1rem',
-    border: `1px solid ${color.darkGray}`,
-    overflow: 'hidden'
+    margin: '0 0 1em 0',
+    minHeight: '200px',
+    width: '550px'
   },
   title: {
+    display: 'inline-block',
+    background: colors.blackHighlight,
     fontFamily: type.fontSans,
-    fontWeight: 'lighter',
-    textDecoration: 'underline',
-    textDecorationSkip: 'ink',
-    textDecorationColor: color.green,
+    padding: '0.1em 0.3em',
     margin: '0 0 .7em 0'
   },
   company: {
@@ -59,14 +20,19 @@ const styles = {
     fontFamily: type.fontSans,
     fontWeight: 'lighter',
   },
-  date: {
-    margin: '4px',
-    fontWeight: 'normal',
-    fontSize: '.8em'
-  },
   tag: {
+    color: colors.gray,
     display: 'inline-block',
     margin: '0 10px 0 0'
+  },
+  filterItem: {
+    display: 'inline-block',
+    margin: '0 15px 0 0',
+    fontFamily: type.fontSans,
+    fontSize: type.alpha
+  },
+  opaque: {
+    opacity: '.2'
   }
 };
 

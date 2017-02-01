@@ -1,26 +1,45 @@
-import React, { Component } from 'react';
-
-import { colors } from '../../vars';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import Container from '../../components/Container';
 import Column from '../../components/Column';
 import Timeline from '../../components/Timeline';
 import Hero from '../../components/Hero';
 
+import { colors } from '../../vars';
+import { filterBy, setTheme, showAll } from '../../actions';
+
 class Work extends Component {
 
+  constructor() {
+    super();
+
+    this._handleFilter = this._handleFilter.bind(this);
+    this._handleShowAll = this._handleShowAll.bind(this);
+  }
+
   componentWillMount() {
-    this.state = {
-      theme: {
-        primary: colors.black,
-        secondary: colors.whiteDark10
-      }
-    };
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    this.props.dispatch(setTheme({
+      primary: colors.black,
+      secondary: colors.whiteDark10
+    }));
+  }
+
+  componentWillReceiveProps(props) {
+    document.body.style.backgroundColor = props.theme.primary;
+    document.body.style.color = props.theme.secondary;
+  }
+
+  _handleFilter(value) {
+    this.props.dispatch(filterBy(value));
+  }
+  _handleShowAll() {
+    this.props.dispatch(showAll());
   }
 
   render() {
+    const { years, events } = this.props;
+
     return (
       <div>
         <Container>
@@ -31,7 +50,12 @@ class Work extends Component {
               through real-time communications, memory forensics, containerisation,
               application architecture and mobile platforms.'
             />
-            <Timeline />
+            <Timeline
+              years={years}
+              data={events}
+              showAll={this._handleShowAll}
+              filterBy={this._handleFilter}
+            />
           </Column>
         </Container>
       </div>
@@ -39,4 +63,19 @@ class Work extends Component {
   }
 }
 
-export default Work;
+Work.propTypes = {
+  events: PropTypes.array.isRequired,
+  theme: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  years: PropTypes.array
+};
+
+const select = (state) => {
+  const events = state.events.data;
+  const theme = state.app.theme;
+  const years = state.events.years;
+  return { events, theme, years };
+};
+
+export default connect(select)(Work);
+
