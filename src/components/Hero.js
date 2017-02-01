@@ -11,7 +11,7 @@ import AnchorLink from '../components/AnchorLink';
 const styles = {
   hero: {
     paddingTop: '30px',
-    paddingBottom: '30px',
+    paddingBottom: '40px',
 
     [breakpoint.medium]: {
       paddingBottom: '60px'
