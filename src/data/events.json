@@ -15,7 +15,8 @@
         "ReactJS",
         "NodeJS",
         "Docker",
-        "RabbitMQ"
+        "RabbitMQ",
+        "MongoDB"
       ]
     }
   },
@@ -76,6 +77,7 @@
         "NodeJS",
         "Docker",
         "CouchDB",
+        "PouchDB",
         "RabbitMQ"
       ]
     }
@@ -116,7 +118,8 @@
         "BackboneJS",
         "NodeJS",
         "SocketIO",
-        "RabbitMQ"
+        "RabbitMQ",
+        "Redis"
       ]
     }
   },
