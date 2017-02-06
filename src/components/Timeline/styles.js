@@ -1,38 +1,27 @@
-import { colors, type } from '../../vars';
+import { breakpoint, colors, type } from '../../vars';
 
 const styles = {
   wrapper: {
-    color: colors.gray,
+    color: colors.whiteDark10,
     fontSize: type.epsilon,
-    margin: '0 0 1em 0',
-    minHeight: '200px',
-    width: '550px'
+    margin: '0 0 3em 0',
+
+    [breakpoint.medium]: {
+      width: '550px',
+    }
   },
   title: {
     display: 'inline-block',
     background: colors.blackHighlight,
+    color: colors.white,
     fontFamily: type.fontSans,
     padding: '0.1em 0.3em',
-    margin: '0 0 .7em 0'
+    margin: '0 0 .7em -10px'
   },
   company: {
     display: 'inline-block',
     fontFamily: type.fontSans,
     fontWeight: 'lighter',
-  },
-  tag: {
-    color: colors.gray,
-    display: 'inline-block',
-    margin: '0 10px 0 0'
-  },
-  filterItem: {
-    display: 'inline-block',
-    margin: '0 15px 0 0',
-    fontFamily: type.fontSans,
-    fontSize: type.alpha
-  },
-  opaque: {
-    opacity: '.2'
   }
 };
 
