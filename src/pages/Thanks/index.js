@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
-
-import { colors } from '../../vars';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import Hero from '../../components/Hero';
 import Container from '../../components/Container';
 import Column from '../../components/Column';
 
 class Thanks extends Component {
+
   componentWillMount() {
-    this.state = {
-      theme: {
-        primary: colors.black,
-        secondary: colors.white
-      }
-    };
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    document.body.style.backgroundColor = this.props.theme.primary;
+    document.body.style.color = this.props.theme.secondary;
   }
 
   render() {
@@ -23,11 +17,21 @@ class Thanks extends Component {
       <div>
         <Hero headline='Thanks for getting in touch!' />
         <Container>
-          <Column title='I’ll be sure to reply as soon as possible.' />
+          <Column title="I'll make sure to reply as soon as possible." />
         </Container>
       </div>
     );
   }
 }
 
-export default Thanks;
+Thanks.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  theme: PropTypes.object.isRequired
+};
+
+const select = (state) => {
+  const theme = state.app.theme;
+  return { theme };
+};
+
+export default connect(select)(Thanks);

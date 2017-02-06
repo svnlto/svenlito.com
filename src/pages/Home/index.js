@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-
-import { colors } from '../../vars';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import Container from '../../components/Container';
 import Column from '../../components/Column';
@@ -9,14 +8,8 @@ import Hero from '../../components/Hero';
 class Home extends Component {
 
   componentWillMount() {
-    this.state = {
-      theme: {
-        primary: colors.black,
-        secondary: colors.whiteDark10
-      }
-    };
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    document.body.style.backgroundColor = this.props.theme.primary;
+    document.body.style.color = this.props.theme.secondary;
   }
 
   render() {
@@ -46,4 +39,14 @@ class Home extends Component {
   }
 }
 
-export default Home;
+Home.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  theme: PropTypes.object.isRequired
+};
+
+const select = (state) => {
+  const theme = state.app.theme;
+  return { theme };
+};
+
+export default connect(select)(Home);

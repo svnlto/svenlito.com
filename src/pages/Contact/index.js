@@ -1,28 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { colors } from '../../vars';
-
 import Container from '../../components/Container';
 import Column from '../../components/Column';
 
 import Hero from '../../components/Hero';
 import ContactForm from '../../components/ContactForm';
 
-import { setTheme } from '../../actions';
-
 class Contact extends Component {
 
   componentWillMount() {
-    this.props.dispatch(setTheme({
-      primary: colors.black,
-      secondary: colors.whiteDark10
-    }));
-  }
-
-  componentWillReceiveProps(props) {
-    document.body.style.backgroundColor = props.theme.primary;
-    document.body.style.color = props.theme.secondary;
+    document.body.style.backgroundColor = this.props.theme.primary;
+    document.body.style.color = this.props.theme.secondary;
   }
 
   render() {
@@ -30,11 +19,11 @@ class Contact extends Component {
       <div>
         <Container>
           <Column width='full'>
-            <Hero headline='Get in touch.' />
+            <Hero headline='Drop me a line.' />
             <Container>
               <Column
                 width={'half'}
-                title="Let's talk about your project or send me a hello."
+                title="Let's talk about your project or just send me a hello."
               />
               <Column width='half'>
                 <ContactForm color='white' />

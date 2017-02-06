@@ -2,11 +2,12 @@ import {
  THEME_CONFIG
 } from '../constants/ActionTypes';
 
+import { colors } from '../vars';
 
 const initialState = {
   theme: {
-    primary: '',
-    secondary: ''
+    primary: colors.black,
+    secondary: colors.whiteDark10
   }
 };
 

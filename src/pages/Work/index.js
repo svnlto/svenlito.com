@@ -6,8 +6,7 @@ import Column from '../../components/Column';
 import Timeline from '../../components/Timeline';
 import Hero from '../../components/Hero';
 
-import { colors } from '../../vars';
-import { filterBy, setTheme, showAll } from '../../actions';
+import { filterBy, showAll } from '../../actions';
 
 class Work extends Component {
 
@@ -19,15 +18,8 @@ class Work extends Component {
   }
 
   componentWillMount() {
-    this.props.dispatch(setTheme({
-      primary: colors.black,
-      secondary: colors.whiteDark10
-    }));
-  }
-
-  componentWillReceiveProps(props) {
-    document.body.style.backgroundColor = props.theme.primary;
-    document.body.style.color = props.theme.secondary;
+    document.body.style.backgroundColor = this.props.theme.primary;
+    document.body.style.color = this.props.theme.secondary;
   }
 
   _handleFilter(value) {
