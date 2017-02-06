@@ -39,7 +39,7 @@ class ColorCursor extends Component {
     gradient.addColorStop(0, colorFrom);
     gradient.addColorStop(1, colorTo);
 
-    ctx.fillStyle = 'pink';
+    ctx.fillStyle = this.props.color;
     ctx.fillRect(0, 0, 15, 15);
 
     node.style.cursor = `url(${cursor.toDataURL()}), auto`;
@@ -101,11 +101,13 @@ class ColorCursor extends Component {
 }
 
 ColorCursor.defaultProps = {
-  interval: 1000
+  interval: 1000,
+  color: 'pink'
 };
 
 ColorCursor.propTypes = {
   children: PropTypes.array,
+  color: PropTypes.string,
   interval: PropTypes.number
 };
 
