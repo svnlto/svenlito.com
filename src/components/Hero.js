@@ -11,11 +11,8 @@ import AnchorLink from '../components/AnchorLink';
 const styles = {
   hero: {
     paddingTop: '30px',
-    paddingBottom: '40px',
+    paddingBottom: '20px',
 
-    [breakpoint.medium]: {
-      paddingBottom: '60px'
-    }
   },
   underline: {
     WebkitTextDecorationColor: colors.pink,
