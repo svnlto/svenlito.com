@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import Isvg from 'react-inlinesvg';
 
@@ -13,21 +13,20 @@ const styles = {
   }
 };
 
-class SocialButton extends Component {
-  render() {
-    const icon = `../images/${this.props.icon}.svg`;
-    return (
-      <a
-        style={styles.button}
-        href={this.props.link}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Isvg src={icon} />
-      </a>
-    );
-  }
-}
+const SocialButton = (props) => {
+  const icon = `../images/${props.icon}.svg`;
+
+  return (
+    <a
+      style={styles.button}
+      href={props.link}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      <Isvg src={icon} />
+    </a>
+  );
+};
 
 SocialButton.propTypes = {
   icon: PropTypes.string,
