@@ -1,12 +1,13 @@
 import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router';
+import TypeWriter from 'react-typewriter';
 
 import Container from './Container';
 import Column from './Column';
 
 import Nav from './Nav';
-import { colors } from '../vars';
+import { type, colors } from '../vars';
 
 const blinkKeyframes = Radium.keyframes({
   '0%': { opacity: 1.0 },
@@ -42,6 +43,10 @@ const styles = {
   },
   inner: {
     borderBottom: 'none'
+  },
+  writer: {
+    fontSize: type.alpha,
+    color: colors.greenLight10
   }
 };
 
@@ -51,6 +56,7 @@ const Header = () => (
       <header style={styles.header}>
         <Link to={'/'} style={styles.inner}>
           <h1 style={styles.heading}>{'>'}
+            <TypeWriter style={styles.writer} typing={0}>Sven Lito</TypeWriter>
             <span style={styles.typist}>{'_'}</span>
           </h1>
         </Link>
