@@ -18,6 +18,9 @@ const styles = {
     }
   },
   underline: {
+    WebkitTextDecorationColor: colors.pink,
+    WebkitTextDecorationLine: 'underline',
+    WebkitTextDecorationSkip: 'ink',
     textDecorationColor: colors.pink,
     textDecorationLine: 'underline',
     textDecorationSkip: 'ink'
