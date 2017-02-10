@@ -37,7 +37,8 @@
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "arrow-body-style": [0, "as-needed"],
-    "no-mix-operators": 0
+    "no-mix-operators": 0,
+    "new-cap": 0
   },
   "plugins": [
     "react"
