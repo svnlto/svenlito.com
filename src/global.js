@@ -82,6 +82,9 @@ const Styles = () =>
       'input::-webkit-input-placeholder, textarea::-webkit-input-placeholder': {
         color: 'currentColor'
       },
+      fieldset: {
+        border: 0
+      },
       textarea: {
         minHeight: '200px',
         maxWidth: '100%'
