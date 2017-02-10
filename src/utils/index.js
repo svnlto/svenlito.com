@@ -1,3 +1,23 @@
+export const getRandomInt = (min, max) => {
+  const num = (min + 1) - max;
+  return Math.floor((Math.random() * num) + min);
+};
+
+export const getRandomPinkArray = (length) => {
+  const makeColor = () => {
+    const r = exports.getRandomInt(234, 240);
+    const g = exports.getRandomInt(170, 192);
+    const b = exports.getRandomInt(203, 182);
+    return `rgba(${r}, ${g}, ${b}, .8)`;
+  };
+
+  return Array.from({ length }, () => {
+    return makeColor();
+  });
+
+};
+
+
 export const getUniqueYears = (data) => {
   return data
   .map(a => new Date(a.date).getFullYear())
