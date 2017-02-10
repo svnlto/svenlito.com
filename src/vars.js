@@ -6,17 +6,19 @@ const pink = color('#efafe7').string();
 const orange = color('#e4b660').string();
 const black = color('#23282c').string();
 const green = color('#2b9a81').string();
-const blackHighlight = color('rgba(17, 20, 21, .7)').string();
+const blackHighlight = color('rgba(17, 20, 21, .2)').string();
 
 const greenLight10 = color(green).lighten(0.1).string();
 const lightGray = color(gray).lighten(1.0).string();
 const darkGray = color(gray).darken(0.2).string();
-const whiteDark10 = color(white).lighten(0.1).string();
+const whiteDark10 = color(white).darken(0.1).string();
+const whiteDark20 = color(white).darken(0.2).string();
 
 // Colours
 export const colors = {
   white,
   whiteDark10,
+  whiteDark20,
   gray,
   darkGray,
   lightGray,
@@ -57,7 +59,7 @@ export const layout = {
 
 // Breakpoints
 export const breakpoint = {
-  large: '@media screen and (min-width: 1439px)',
+  large: '@media screen and (min-width: 1100px)',
   medium: '@media screen and (min-width: 800px) and (min-width: 1099px)',
   small: '@media screen and (min-width: 600px) and (max-width: 799px)',
 };
