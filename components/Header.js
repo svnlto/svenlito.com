@@ -29,7 +29,7 @@ const styles = {
     alignItems: 'center'
   },
   heading: {
-    fontWeight: 'lighter',
+    fontWeight: '500',
     color: colors.greenLight10
   },
   typist: {
