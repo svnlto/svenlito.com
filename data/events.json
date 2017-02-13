@@ -1,0 +1,166 @@
+[
+  {
+    "type": "work",
+    "date": "2016-08-31T14:00:00.000Z",
+    "company": {
+      "name": "Comae",
+      "desc": "Comae is a Dubai-based information security start-up."
+    },
+    "title": "FullStack JavaScript Developer",
+    "desc": [
+      "I was hired to implement several services supporting their forensics data processing platform and built an application prototype."
+    ],
+    "extras": {
+      "tags": [
+        "ReactJS",
+        "NodeJS",
+        "Docker",
+        "RabbitMQ",
+        "MongoDB"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2015-10-31T13:00:00.000Z",
+    "company": {
+      "name": "McKinsey Digital Labs",
+      "desc": "McKinsey Digital Labs is a global management consulting firm."
+    },
+    "title": "Software Architect",
+    "desc": [
+      "I was hired as an software architect to advise on Infrastructure and Microservice topics, Mobile Application Development and to implement solutions for their international clients."
+    ],
+    "extras": {
+      "tags": [
+        "ReactJS",
+        "ReactNative",
+        "NodeJS",
+        "Docker"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2015-07-31T14:00:00.000Z",
+    "company": {
+      "name": "T-Labs",
+      "desc": "T-Labs is an innovation laboratory which hires experts and creatives from countries all around the world."
+    },
+    "title": "DevOps Engineer",
+    "desc": [
+      "In this role I was responsible for transitioning their infrastructure virtual machine centric to a container-based environment, enabling continuous deployment of Docker images onto the infrastructure."
+    ],
+    "extras": {
+      "tags": [
+        "Docker",
+        "Swarm",
+        "Terraform",
+        "Packer"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2014-08-31T14:00:00.000Z",
+    "company": {
+      "name": "T-Labs",
+      "desc": "The mission of T-Labs is to develop innovative products and solutions while working in close cooperation with science and industry."
+    },
+    "title": "FullStack JavaScript Developer",
+    "desc": [
+      "I architected, designed and implemented an offline-first prototype for a communications app product running on desktop, tablet and mobile devices."
+    ],
+    "extras": {
+      "tags": [
+        "ReactJS",
+        "NodeJS",
+        "Docker",
+        "CouchDB",
+        "PouchDB",
+        "RabbitMQ"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2014-11-30T13:00:00.000Z",
+    "company": {
+      "name": "eHealth Africa",
+      "desc": "eHealth Africa's goal is to provide solutions to public health interventions across West Africa."
+    },
+    "title": "FullStack JavaScript Developer",
+    "desc": [
+      "I was called to create Microservices for global and local identifier handling which supported an Offline-First document storage system, used by agents out in the field. "
+    ],
+    "extras": {
+      "tags": [
+        "ReactJS",
+        "NodeJS",
+        "PostgreSQL",
+        "Docker"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2012-12-31T13:00:00.000Z",
+    "company": {
+      "name": "Pebble {Code}",
+      "desc": "Pebble {Code} is a technical innovation consultancy based in South London, UK catering to clients such as AstraZeneca and BedeGaming."
+    },
+    "title": "FullStack JavaScript Developer",
+    "desc": [
+      "At pebble I implemented Node.js integrations with internal systems and developed various dashboards to gain better insights into their systems. I also developed a JavaScript framework that was used to author clients mobile game implementations."
+    ],
+    "extras": {
+      "tags": [
+        "BackboneJS",
+        "NodeJS",
+        "SocketIO",
+        "RabbitMQ",
+        "Redis"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2010-02-14T13:00:00.000Z",
+    "company": {
+      "name": "Williams Lea Tag",
+      "desc": "Williams Lea Tag is a global brand services agency based in London, UK."
+    },
+    "title": "Senior Front-end Developer",
+    "desc": [
+      "The initial task was to support the UX team by converting mockups and wireframes into HTML prototypes. Later, I was responsible for the Front-End redesign and development of the main product (tag:cmd), converting the legacy code base into a state of the art application. ",
+      "During my time at Tag I was promoted to Front-End Team Lead where I coordinated and mentored team members and aquainted them with modern development practices such as Test Driven Development, Continuous Integration and Deployment."
+    ],
+    "extras": {
+      "tags": [
+        "BackboneJS",
+        "NodeJS",
+        "REST"
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "date": "2007-08-31T14:00:00.000Z",
+    "company": {
+      "name": "Enoise",
+      "desc": "Enoise is a WordPress hosting company based in London, UK."
+    },
+    "title": "Front-end Developer",
+    "desc": [
+      "I was in charge of running in-house infrastructure that was used to support open-source PHP projects. I also built WordPress themes and plugins for clients."
+    ],
+    "extras": {
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "jQuery",
+        "NodeJS"
+      ]
+    }
+  }
+]
