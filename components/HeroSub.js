@@ -67,4 +67,4 @@ HeroSub.propTypes = {
   keywords: PropTypes.array
 };
 
-export default new Radium(HeroSub);
+export default Radium(HeroSub);

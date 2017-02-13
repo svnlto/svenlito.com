@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
 import { breakpoint, layout } from '../vars';
@@ -25,16 +25,13 @@ const styles = {
   }
 };
 
-@Radium
-class Container extends Component {
-  render() {
-    return (
-      <div className='container' style={styles.container}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Container = (props) => {
+  return (
+    <div className='container' style={styles.container}>
+      {props.children}
+    </div>
+  );
+};
 
 Container.propTypes = {
   children: PropTypes.oneOfType([
@@ -44,4 +41,4 @@ Container.propTypes = {
 };
 
 
-export default Container;
+export default Radium(Container);

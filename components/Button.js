@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import Isvg from 'react-inlinesvg';
 
@@ -48,30 +48,28 @@ const styles = {
   }
 };
 
-class Button extends Component {
-  render() {
-    const icon = `../images/${this.props.icon}.svg`;
-    return (
-      <button
-        style={[
-          styles.button,
-          styles[this.props.color],
-          styles[this.props.margin]
-        ]}
-        onClick={this.props.click}
-      >
-        { this.props.icon &&
-          <span style={styles.icon}>
-            <Isvg src={icon} />
-          </span>
-        }
-        <span style={styles.text}>
-          {this.props.text} {this.props.type === 'arrow' && '→'}
+const Button = (props) => {
+  const icon = `/static/${props.icon}.svg`;
+  return (
+    <button
+      style={[
+        styles.button,
+        styles[props.color],
+        styles[props.margin]
+      ]}
+      onClick={props.click}
+    >
+      { props.icon &&
+        <span style={styles.icon}>
+          <Isvg src={icon} />
         </span>
-      </button>
-    );
-  }
-}
+      }
+      <span style={styles.text}>
+        {props.text} {props.type === 'arrow' && '→'}
+      </span>
+    </button>
+  );
+};
 
 Button.propTypes = {
   click: PropTypes.string,

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
 import { breakpoint, type } from '../vars';
@@ -52,34 +52,31 @@ const styles = {
   }
 };
 
-@Radium
-class Column extends Component {
-  render() {
-    return (
-      <div
-        style={[
-          styles.column,
-          styles[this.props.width],
-          styles[this.props.display]
-        ]}
-      >
-        {this.props.title &&
-          <h3 style={styles.title}>{this.props.title}</h3>
-        }
-        {this.props.headline &&
-          <h2 style={styles.headline}>{this.props.headline}</h2>
-        }
-        {this.props.intro &&
-          <p style={styles.intro}>{this.props.intro}</p>
-        }
-        {this.props.content &&
-          <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
-        }
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Column = (props) => {
+  return (
+    <div
+      style={[
+        styles.column,
+        styles[props.width],
+        styles[props.display]
+      ]}
+    >
+      {props.title &&
+        <h3 style={styles.title}>{props.title}</h3>
+      }
+      {props.headline &&
+        <h2 style={styles.headline}>{props.headline}</h2>
+      }
+      {props.intro &&
+        <p style={styles.intro}>{props.intro}</p>
+      }
+      {props.content &&
+        <div dangerouslySetInnerHTML={{ __html: props.content }} />
+      }
+      {props.children}
+    </div>
+  );
+};
 
 Column.propTypes = {
   column: PropTypes.string,
@@ -95,4 +92,4 @@ Column.propTypes = {
   ])
 };
 
-export default Column;
+export default Radium(Column);

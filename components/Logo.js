@@ -1,7 +1,8 @@
 import React from 'react';
-import { IndexLink } from 'react-router';
 import Radium from 'radium';
 import Isvg from 'react-inlinesvg';
+
+import Link from './Link';
 
 const styles = {
   logo: {
@@ -12,11 +13,11 @@ const styles = {
 const Logo = () => {
   const logo = '';
   return (
-    <IndexLink style={styles.logo} to='/'>
+    <Link style={styles.logo} href='/'>
       <Isvg src={logo} />
-    </IndexLink>
+    </Link>
   );
 };
 
-export default new Radium(Logo);
+export default Radium(Logo);
 

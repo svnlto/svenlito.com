@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import Radium from 'radium';
 
 import { type } from '../vars';
+import Link from './Link';
 
 const styles = {
   item: {
@@ -23,9 +23,11 @@ const styles = {
 
 const ListItem = (props) => {
   return (
-    <Link to={props.link} style={styles.item}>
-      <h2 style={styles.title}>{props.title}</h2>
-      <p>{props.summary}</p>
+    <Link style={styles.item}>
+      <a href={props.link}>
+        <h2 style={styles.title}>{props.title}</h2>
+        <p>{props.summary}</p>
+      </a>
     </Link>
   );
 };
@@ -36,4 +38,4 @@ ListItem.propTypes = {
   title: PropTypes.string
 };
 
-export default new Radium(ListItem);
+export default Radium(ListItem);

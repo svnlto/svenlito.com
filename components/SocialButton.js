@@ -14,7 +14,7 @@ const styles = {
 };
 
 const SocialButton = (props) => {
-  const icon = `../images/${props.icon}.svg`;
+  const icon = `/static/${props.icon}.svg`;
 
   return (
     <a

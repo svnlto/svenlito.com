@@ -61,4 +61,4 @@ List.propTypes = {
   items: PropTypes.array,
 };
 
-export default new Radium(List);
+export default Radium(List);

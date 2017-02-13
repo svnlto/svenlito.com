@@ -20,7 +20,7 @@ const ClientLogo = (props) => {
   const url = `../images/work/${props.client}.svg`;
   return (
     <div>
-      {this.props.client && <span style={styles.logo}><Isvg src={url} /></span>}
+      {props.client && <span style={styles.logo}><Isvg src={url} /></span>}
     </div>
   );
 };
