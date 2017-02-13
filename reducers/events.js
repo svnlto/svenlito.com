@@ -1,5 +1,5 @@
 import {
-  FILTER_EVENTS,
+  EVENTS_FILTER,
   EVENTS_ALL
 } from '../constants/ActionTypes';
 
@@ -19,7 +19,7 @@ const handlers = {
   [EVENTS_ALL]: (state) => {
     return { ...state };
   },
-  [FILTER_EVENTS]: (state, action) => {
+  [EVENTS_FILTER]: (state, action) => {
     const mapped = data.map(item => {
       if (getFullYear(item) === parseInt(action.value, 10)) {
         return Object.assign({}, item, {

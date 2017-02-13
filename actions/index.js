@@ -1,11 +1,11 @@
 import {
-  FILTER_EVENTS,
+  EVENTS_FILTER,
   EVENTS_ALL,
   THEME_CONFIG
 } from '../constants/ActionTypes';
 
 export function filterBy(value) {
-  return { type: FILTER_EVENTS, value };
+  return { type: EVENTS_FILTER, value };
 }
 
 export function showAll() {
