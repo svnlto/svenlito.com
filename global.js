@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium, { Style } from 'radium';
 
-import { type, colors } from './vars';
+import { type, colors } from './constants';
 import { initialState } from './reducers/app';
 
 const Styles = () =>

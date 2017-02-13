@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { breakpoint, type } from '../vars';
+import { breakpoint, type } from '../constants';
 
 const styles = {
   list: {

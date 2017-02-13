@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import Isvg from 'react-inlinesvg';
 
-import { breakpoint } from '../vars';
+import { breakpoint } from '../constants';
 
 const styles = {
   logo: {
@@ -17,7 +17,7 @@ const styles = {
 
 
 const ClientLogo = (props) => {
-  const url = `../images/work/${props.client}.svg`;
+  const url = `/static/${props.client}.svg`;
   return (
     <div>
       {props.client && <span style={styles.logo}><Isvg src={url} /></span>}

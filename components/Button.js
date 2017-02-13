@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import Isvg from 'react-inlinesvg';
 
-import { type } from '../vars';
+import { type } from '../constants';
 
 const styles = {
   button: {

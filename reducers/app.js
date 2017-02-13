@@ -2,7 +2,7 @@ import {
  THEME_CONFIG
 } from '../constants/ActionTypes';
 
-import { colors } from '../vars';
+import { colors } from '../constants';
 
 export const initialState = {
   theme: {

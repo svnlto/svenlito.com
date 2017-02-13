@@ -1,4 +1,4 @@
-import { breakpoint, colors, type } from '../../vars';
+import { breakpoint, colors, type } from '../../constants';
 
 const styles = {
   wrapper: {

@@ -3,7 +3,7 @@ import Radium from 'radium';
 
 import Link from './Link';
 
-import { nav, breakpoint } from '../vars';
+import { nav, breakpoint } from '../constants';
 
 const styles = {
   nav: {

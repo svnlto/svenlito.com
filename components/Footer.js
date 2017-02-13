@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { type } from '../vars';
+import { type } from '../constants';
 
 import Container from '../components/Container';
 import Column from '../components/Column';

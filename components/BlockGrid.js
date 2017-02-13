@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'next/link';
 import Radium from 'radium';
 
-import { breakpoint, colors, type } from '../vars';
+import { breakpoint, colors, type } from '../constants';
 
 const styles = {
   block: {

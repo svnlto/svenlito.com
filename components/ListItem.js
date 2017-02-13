@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { type } from '../vars';
+import { type } from '../constants';
 import Link from './Link';
 
 const styles = {

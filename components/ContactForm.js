@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { colors } from '../vars';
+import { colors } from '../constants';
 
 const styles = {
   field: {

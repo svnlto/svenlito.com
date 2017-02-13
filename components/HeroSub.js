@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import replace from 'string-replace-to-array';
 import Radium from '../utils/Radium';
 
-import { breakpoint, colors } from '../vars';
+import { breakpoint, colors } from '../constants';
 
 import Container from '../components/Container';
 import Column from '../components/Column';

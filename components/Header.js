@@ -7,7 +7,7 @@ import Container from './Container';
 import Column from './Column';
 
 import Nav from './Nav';
-import { type, colors } from '../vars';
+import { type, colors } from '../constants';
 
 const blinkKeyframes = Radium.keyframes({
   '0%': { opacity: 1.0 },
