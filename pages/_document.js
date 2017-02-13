@@ -7,10 +7,13 @@ export default class MyDocument extends Document {
 
   static async getInitialProps(ctx) {
     const props = await Document.getInitialProps(ctx);
-    return { ...props };
+    const { req } = ctx;
+    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+    return { ...props, userAgent };
   }
 
   render() {
+    const { userAgent } = this.props;
 
     return (
       <html lang='en'>
@@ -23,7 +26,7 @@ export default class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         </Head>
         <body>
-          <Main />
+          <Main radiumConfig={{ userAgent }} />
           <NextScript />
         </body>
       </html>
