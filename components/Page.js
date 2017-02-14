@@ -7,6 +7,7 @@ import reducers from '../reducers';
 
 import Styles from '../global';
 
+import ColorCursor from './ColorCursor';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -48,13 +49,15 @@ const decorator = (ComposedComponent) => {
         <Provider store={this.store}>
           <StyleRoot>
             <Styles radiumConfig={{ userAgent: this.props.userAgent }} />
-            <Header path={this.props.url.pathname} />
-            <div style={{ padding: '2rem 0', minHeight: '80vh' }}>
-              <ComposedComponent
-                {...this.props}
-              />
-            </div>
-            <Footer />
+            <ColorCursor color='pink'>
+              <Header path={this.props.url.pathname} />
+              <div style={{ padding: '2rem 0', minHeight: '80vh' }}>
+                <ComposedComponent
+                  {...this.props}
+                />
+              </div>
+              <Footer />
+            </ColorCursor>
           </StyleRoot>
         </Provider>
       );
