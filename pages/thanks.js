@@ -8,12 +8,14 @@ import Column from '../components/Column';
 const Thanks = () => {
 
   return (
-    <div>
-      <Hero headline='Thanks for getting in touch!' />
-      <Container>
-        <Column title="I'll make sure to reply as soon as possible." />
-      </Container>
-    </div>
+    <Container>
+      <Column width='full'>
+        <Hero headline='Thanks for getting in touch!' />
+        <Container>
+          <Column title="I'll make sure to reply as soon as possible." />
+        </Container>
+      </Column>
+    </Container>
   );
 };
 

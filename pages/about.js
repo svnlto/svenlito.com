@@ -8,12 +8,14 @@ import Column from '../components/Column';
 const About = () => {
 
   return (
-    <div>
-      <Hero headline='Stay tuned.' />
-      <Container>
-        <Column title='This is coming soon.' />
-      </Container>
-    </div>
+    <Container>
+      <Column width='full'>
+        <Hero headline='Stay tuned.' />
+        <Container>
+          <Column title='This is coming soon.' />
+        </Container>
+      </Column>
+    </Container>
   );
 };
 
