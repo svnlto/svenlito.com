@@ -52,31 +52,29 @@ const styles = {
   }
 };
 
-const Column = (props) => {
-  return (
-    <div
-      style={[
-        styles.column,
-        styles[props.width],
-        styles[props.display]
-      ]}
-    >
-      {props.title &&
-        <h3 style={styles.title}>{props.title}</h3>
-      }
-      {props.headline &&
-        <h2 style={styles.headline}>{props.headline}</h2>
-      }
-      {props.intro &&
-        <p style={styles.intro}>{props.intro}</p>
-      }
-      {props.content &&
-        <div dangerouslySetInnerHTML={{ __html: props.content }} />
-      }
-      {props.children}
-    </div>
-  );
-};
+const Column = (props) => (
+  <div
+    style={[
+      styles.column,
+      styles[props.width],
+      styles[props.display]
+    ]}
+  >
+    {props.title &&
+      <h3 style={styles.title}>{props.title}</h3>
+    }
+    {props.headline &&
+      <h2 style={styles.headline}>{props.headline}</h2>
+    }
+    {props.intro &&
+      <p style={styles.intro}>{props.intro}</p>
+    }
+    {props.content &&
+      <div dangerouslySetInnerHTML={{ __html: props.content }} />
+    }
+    {props.children}
+  </div>
+);
 
 Column.propTypes = {
   column: PropTypes.string,

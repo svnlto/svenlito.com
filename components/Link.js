@@ -1,20 +1,16 @@
 import React, { PropTypes } from 'react';
 import Router from 'next/router';
 
-const onClickHandler = (href) => {
-  return (e) => {
-    e.preventDefault();
-    Router.push(href);
-  };
+const onClickHandler = (href) => (e) => {
+  e.preventDefault();
+  Router.push(href);
 };
 
-const Link = ({ children, href, style }) => {
-  return (
-    <a href={`${href}`} style={style} onClick={onClickHandler(href)}>
-      {children}
-    </a>
-  );
-};
+const Link = ({ children, href, style }) => (
+  <a href={`${href}`} style={style} onClick={onClickHandler(href)}>
+    {children}
+  </a>
+);
 
 Link.propTypes = {
   href: PropTypes.string,

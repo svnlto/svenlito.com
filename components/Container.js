@@ -25,13 +25,11 @@ const styles = {
   }
 };
 
-const Container = (props) => {
-  return (
-    <div className='container' style={styles.container}>
-      {props.children}
-    </div>
-  );
-};
+const Container = (props) => (
+  <div style={styles.container}>
+    {props.children}
+  </div>
+);
 
 Container.propTypes = {
   children: PropTypes.oneOfType([
@@ -39,6 +37,5 @@ Container.propTypes = {
     PropTypes.array.isRequired
   ])
 };
-
 
 export default Radium(Container);
