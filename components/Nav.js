@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
 
 import Link from './Link';
@@ -26,32 +26,45 @@ const styles = {
   }
 };
 
-const Nav = ({ path }) => {
-  const renderNav = (navItems) => {
-    return navItems.map((item, index) => {
-      return (
-        <li style={styles.link} key={index}>
+class Nav extends Component {
+  render() {
+    const { path } = this.props;
+    return (
+      <nav style={styles.nav}>
+        <span style={styles.link}>
           <Link
-            href={`/${item}`}
             style={
               Object.assign({},
                 styles.inner,
-                path === `/${item}` && styles.active
-            )}
-          >{item}</Link>
-        </li>
-      );
-    });
-  };
-
-  return (
-    <nav style={styles.nav}>
-      <ul>
-        {renderNav(nav)}
-      </ul>
-    </nav>
-  );
-};
+                path === '/work' && styles.active
+              )}
+            href='/work'
+          >Work</Link>
+        </span>
+        <span style={styles.link}>
+          <Link
+            style={
+              Object.assign({},
+                styles.inner,
+                path === '/about' && styles.active
+              )}
+            href='/about'
+          >About</Link>
+        </span>
+        <span style={styles.link}>
+          <Link
+            style={
+              Object.assign({},
+                styles.inner,
+                path === '/contact' && styles.active
+              )}
+            href='/contact'
+          >Contact</Link>
+        </span>
+      </nav>
+    );
+  }
+}
 
 Nav.propTypes = {
   path: PropTypes.string.isRequired
