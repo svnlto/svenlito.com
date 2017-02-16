@@ -11,7 +11,7 @@ const styles = {
   },
   title: {
     display: 'inline-block',
-    fontWeight: 'lighter',
+    fontWeight: 500,
     background: colors.blackHighlight,
     fontFamily: type.fontSans,
     padding: '0.1em 0.3em',
