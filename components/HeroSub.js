@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import replace from 'string-replace-to-array';
 import Radium from '../utils/Radium';
 
-import { breakpoint, colors } from '../constants';
+import { breakpoint } from '../constants';
 
 import Container from '../components/Container';
 import Column from '../components/Column';
@@ -10,18 +10,10 @@ import AnchorLink from '../components/AnchorLink';
 
 const styles = {
   heading: {
-    fontWeight: '500'
+    fontWeight: 500
   },
   hero: {
-    padding: '20px 0 0 0'
-  },
-  underline: {
-    WebkitTextDecorationColor: colors.pink,
-    WebkitTextDecorationLine: 'underline',
-    WebkitTextDecorationSkip: 'ink',
-    textDecorationColor: colors.pink,
-    textDecorationLine: 'underline',
-    textDecorationSkip: 'ink'
+    padding: '20px 0 0 0',
   },
   link: {
     marginTop: '60px',
