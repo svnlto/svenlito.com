@@ -6,6 +6,7 @@ import initStore from '../store';
 import reducers from '../reducers';
 
 import Styles from '../global';
+import { colors } from '../constants';
 
 import ColorCursor from './ColorCursor';
 import Header from './Header';
@@ -45,12 +46,14 @@ const decorator = (ComposedComponent) => {
 
 
     render() {
+      const { userAgent, url } = this.props;
+
       return (
         <Provider store={this.store}>
           <StyleRoot>
-            <Styles radiumConfig={{ userAgent: this.props.userAgent }} />
-            <ColorCursor color='pink'>
-              <Header path={this.props.url.pathname} />
+            <Styles radiumConfig={{ userAgent }} />
+            <ColorCursor color={colors.green}>
+              <Header path={url.pathname} />
               <div style={{ padding: '2rem 0', minHeight: '80vh' }}>
                 <ComposedComponent
                   {...this.props}
