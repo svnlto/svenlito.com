@@ -19,3 +19,10 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'iosevka';
+  src: url('/static/iosevka-light.woff2') format('woff2'),
+       url('/static/iosevka-light.woff') format('woff');
+  font-weight: normal,
+  font-style: normal
+}
