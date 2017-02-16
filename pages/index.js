@@ -10,13 +10,13 @@ const Home = () => (
     <Column width='full'>
       <Hero
         headline="Hi, I'm Sven, a Freelance Full-Stack JavaScript
-        Developer with a passion for Digital Arts, Distributed Systems
+        Developer with a passion for Visual Arts, Distributed Systems
         and Functional Programming. I'm an expert in creating experiences
         for screen and mobile."
         keywords={[
           'Functional Programming',
           'Full-Stack JavaScript Developer',
-          'Digital Arts',
+          'Visual Arts',
           'Distributed Systems',
           'creating experiences'
         ]}
