@@ -5,22 +5,33 @@ class ColorCursor extends Component {
   constructor(props) {
     super(props);
 
-    this._makeCursor = this._makeCursor.bind(this);
+    this.draw = this.draw.bind(this);
   }
 
   componentDidMount() {
-    this._makeCursor();
+    this.draw();
   }
 
-  _makeCursor() {
+  draw() {
     const cursor = document.createElement('canvas');
     const ctx = cursor.getContext('2d');
     const node = this.node;
+    const { color } = this.props;
+    const radius = 15 / 2;
 
-    cursor.width = 15;
-    cursor.height = 15;
-    ctx.fillStyle = this.props.color;
-    ctx.fillRect(0, 0, 15, 15);
+
+    cursor.width = radius * 2;
+    cursor.height = radius * 2;
+
+    // reactagle
+    // ctx.fillStyle = this.props.color;
+    // ctx.fillRect(0, 0, 15, 15);
+
+    // circle
+    ctx.beginPath();
+    ctx.arc(radius, radius, radius, 0, 2 * Math.PI, false);
+    ctx.fillStyle = color;
+    ctx.fill();
 
     node.style.cursor = `url(${cursor.toDataURL()}), auto`;
   }
