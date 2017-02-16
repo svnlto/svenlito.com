@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
-import TypeWriter from 'react-typewriter';
-import Link from 'next/prefetch';
+import Link from './Link';
 
 import Container from './Container';
 import Column from './Column';
@@ -49,13 +48,10 @@ const Header = (props) => (
   <Container>
     <Column width='full'>
       <header style={styles.header}>
-        <Link href={'/'}>
-          <a href={'/'} style={styles.inner}>
-            <h1 style={styles.heading}>{'>'}
-              <TypeWriter style={styles.writer} typing={0}>Sven Lito</TypeWriter>
-              <span style={styles.typist}>{'_'}</span>
-            </h1>
-          </a>
+        <Link href='/' style={styles.inner}>
+          <h1 style={styles.heading}>{'>'}
+            <span style={styles.typist}>{'_'}</span>
+          </h1>
         </Link>
         <Nav path={props.path} />
       </header>
