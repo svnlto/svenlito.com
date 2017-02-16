@@ -1,8 +1,16 @@
 import React, { PropTypes } from 'react';
 import Router from 'next/router';
+import ReactGA from 'react-ga';
+import { GAID } from '../constants';
+
 
 const onClickHandler = (href) => (e) => {
   e.preventDefault();
+  if (window) {
+    ReactGA.initialize(GAID);
+    ReactGA.pageview(href);
+  }
+
   Router.push(href);
 };
 

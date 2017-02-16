@@ -67,6 +67,8 @@ export const breakpoint = {
 // Navigation Items
 export const nav = ['about', 'work', 'contact'];
 
+export const GAID = 'UA-30900799-1';
+
 const vars = {
   colors,
   type,
