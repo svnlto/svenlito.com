@@ -41,15 +41,14 @@ class Work extends Component {
         <Container>
           <Column width='full'>
             <Hero
-              keywords={['design', 'deliver', 'adapt']}
+              keywords={['design', 'deliver', 'adapt', 'software development', 'across platforms']}
               headline='I help clients design, adapt and deliver projects through
-              modern development techniques and methodolgies across platforms.
+              modern software development methodolgies and techniques across platforms.
               '
             />
             <HeroSub
-              headline='some of the areas I worked in include real-time communications,
-              memory forensics, offline-first, mobile, containerisation,
-               a number of industries  eu fugiat nulla'
+              headline='Areas I have worked in include containerisation, real-time communications,
+              memory forensics, offline-first, as well as mobile and game development.'
             />
             <Timeline
               years={years}
