@@ -14,8 +14,11 @@ const styles = {
   footer: {
     width: '100%',
     margin: 'auto',
+    paddingTop: '20px',
+    paddingBottom: '20px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
 };
 
