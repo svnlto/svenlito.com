@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 
-import { colors } from '../constants';
-
 const styles = {
   block: {
     display: 'table',
@@ -54,7 +52,7 @@ const Anchor = (props) => {
   } else {
     link = (
       <a href={props.url} style={styles.link} rel='noopener noreferrer' target='_blank'>
-        <span style={styles.linkInner} >{props.text}</span> &rarr;
+        <span style={styles.linkInner}>{props.text}</span> &rarr;
       </a>
     );
   }
@@ -68,6 +66,7 @@ const Anchor = (props) => {
 Anchor.propTypes = {
   url: PropTypes.string,
   color: PropTypes.string,
+  link: PropTypes.string,
   margin: PropTypes.string,
   type: PropTypes.string,
   text: PropTypes.string

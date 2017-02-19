@@ -42,13 +42,13 @@ const AnchorLink = (props) => {
   if (props.type === 'block') {
     link = (
       <Link ref={props.link} style={styles.block}>
-        <span>{props.text}</span> &rarr;
+        <span style={styles.linkInner}>{props.text}</span> &rarr;
       </Link>
     );
   } else {
     link = (
       <Link href={props.link} style={[styles.link]}>
-        <span>{props.text}</span> &rarr;
+        <span style={styles.linkInner}>{props.text}</span> &rarr;
       </Link>
     );
   }

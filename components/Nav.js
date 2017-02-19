@@ -36,6 +36,16 @@ class Nav extends Component {
             style={
               Object.assign({},
                 styles.inner,
+                path === '/' && styles.active
+              )}
+            href='/'
+          >About</Link>
+        </span>
+        <span style={styles.link}>
+          <Link
+            style={
+              Object.assign({},
+                styles.inner,
                 path === '/work' && styles.active
               )}
             href='/work'
