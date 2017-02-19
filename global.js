@@ -60,7 +60,6 @@ const Styles = () =>
         color: 'inherit',
         textDecoration: 'none',
         paddingBottom: '1px',
-        borderBottom: '1px solid',
         transition: '0.2s opacity'
       },
       'a:hover': {
