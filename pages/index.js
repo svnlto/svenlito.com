@@ -18,7 +18,7 @@ const Home = () => (
           'Full-Stack JavaScript Developer',
           'Visual Arts',
           'Distributed Systems',
-          'creating experiences'
+          'creating experiences for screen and mobile'
         ]}
         link='/contact'
         text='Talk to me'
