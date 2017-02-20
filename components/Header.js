@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
-import Link from './Link';
 
+import Logo from './Logo';
 import Container from './Container';
 import Column from './Column';
 
@@ -48,11 +48,7 @@ const Header = (props) => (
   <Container>
     <Column width='full'>
       <header style={styles.header}>
-        <Link href='/' style={styles.inner}>
-          <h1 style={styles.heading}>{'>'}
-            <span style={styles.typist}>{'_'}</span>
-          </h1>
-        </Link>
+        <Logo />
         <Nav path={props.path} />
       </header>
     </Column>
