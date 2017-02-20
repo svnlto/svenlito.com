@@ -9,9 +9,9 @@ import Column from '../components/Column';
 const NotFound = () => (
   <Container>
     <Column width='full'>
-      <Hero headline='Oupsie!' />
+      <Hero headline='Not Found.' />
       <Container>
-        <Column width='third' title='Not found what you were looking for?'>
+        <Column width='half' title='Well, this is embarrassing. Seems like something is broken.'>
           <AnchorLink text='Back to square one' link='/' />
         </Column>
       </Container>
