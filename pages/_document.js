@@ -19,10 +19,12 @@ export default class MyDocument extends Document {
       <html lang='en'>
         <Head>
           <meta charSet='utf-8' />
-          <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1' />
-          <meta name='description' content='' />
-          <link rel='icon' href='/images/favicon.png' type='image/x-icon' />
           <title>Sven Lito - FullStack JavaScript/NodeJS Developer</title>
+          <meta name='keywords' content='Sven Lito Software Ltd, JavaScript Development and Consulting' />
+          <meta name='description' content='JavaScript, Development, Consultancy, React-Native, React.js, Redux, Node.js, NodeJS, Creative Coding' />
+          <meta name='author' content='Sven Lito' />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1' />
+          <link rel='icon' href='/images/favicon.png' type='image/x-icon' />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         </Head>
         <body>
