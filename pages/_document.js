@@ -24,7 +24,10 @@ export default class MyDocument extends Document {
           <meta name='description' content='JavaScript, Development, Consultancy, React-Native, React.js, Redux, Node.js, NodeJS, Creative Coding' />
           <meta name='author' content='Sven Lito' />
           <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1' />
-          <link rel='icon' href='/images/favicon.png' type='image/x-icon' />
+          <link rel='icon' type='image/png' sizes='64x64' href='/static/favicon-64x64.png' />
+          <link rel='icon' type='image/png' sizes='48x48' href='/static/favicon-48x48.png' />
+          <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon-32x32.png' />
+          <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon-16x16.png' />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         </Head>
         <body>
