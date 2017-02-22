@@ -13,6 +13,7 @@ const lightGray = color(gray).lighten(1.0).string();
 const darkGray = color(gray).darken(0.2).string();
 const whiteDark10 = color(white).darken(0.1).string();
 const whiteDark20 = color(white).darken(0.2).string();
+const cursorGreen = color('rgba(43, 154, 129, .75)').string();
 
 // Colours
 export const colors = {
@@ -26,6 +27,7 @@ export const colors = {
   blackHighlight,
   green,
   greenLight10,
+  cursorGreen,
   pink,
   orange
 };

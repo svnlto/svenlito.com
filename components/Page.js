@@ -52,7 +52,7 @@ const decorator = (ComposedComponent) => {
         <Provider store={this.store}>
           <StyleRoot>
             <Styles radiumConfig={{ userAgent }} />
-            <ColorCursor color={colors.green}>
+            <ColorCursor color={colors.cursorGreen}>
               <Header path={url.pathname} />
               <div style={{ padding: '2rem 0', minHeight: '80vh' }}>
                 <ComposedComponent

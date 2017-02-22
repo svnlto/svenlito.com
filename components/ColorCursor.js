@@ -23,11 +23,6 @@ class ColorCursor extends Component {
     cursor.width = radius * 2;
     cursor.height = radius * 2;
 
-    // reactagle
-    // ctx.fillStyle = this.props.color;
-    // ctx.fillRect(0, 0, 15, 15);
-
-    // circle
     ctx.beginPath();
     ctx.arc(radius, radius, radius, 0, 2 * Math.PI, false);
     ctx.fillStyle = color;
