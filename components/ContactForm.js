@@ -40,7 +40,7 @@ const styles = {
 };
 
 const ContactForm = (props) => {
-  const url = 'http://0.0.0.0:3000/thanks';
+  const url = 'http://svenlito.com/thanks';
 
   return (
     <form
