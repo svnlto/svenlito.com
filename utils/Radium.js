@@ -2,7 +2,7 @@ import Radium from 'radium';
 import prefixAll from 'radium-plugin-prefix-all';
 
 const ConfiguredRadium = (component) => {
-  return new Radium({
+  return Radium({
     plugins: [
       Radium.Plugins.mergeStyleArray,
       Radium.Plugins.checkProps,
