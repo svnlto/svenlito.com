@@ -17,8 +17,8 @@ const styles = {
 
 const Social = () => (
   <ul>
-    <li style={styles.link}><a style={styles.anchor} href='/contact'>email</a></li>
-    <li style={styles.link}><a style={styles.anchor} href='http://github.com/svnlto'>github</a></li>
+    <li style={styles.link}><a style={styles.anchor} href='/contact'>email</a> &bull; </li>
+    <li style={styles.link}><a style={styles.anchor} href='http://github.com/svnlto'>github</a> &bull; </li>
     <li style={styles.link}><a style={styles.anchor} href='http://twitter.com/svenlito'>twitter</a></li>
   </ul>
 );
