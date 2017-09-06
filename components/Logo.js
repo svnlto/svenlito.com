@@ -9,8 +9,6 @@ const styles = {
   }
 };
 
-// const increment = (step, speed) => step + speed;
-
 class Logo extends Component {
 
   constructor(props) {
@@ -39,7 +37,7 @@ class Logo extends Component {
             <rect id='path-3' x='15' y='15' width='40' height='40' />
             <rect id='path-5' x='0' y='0' width='50' height='50' />
           </defs>
-          <use stroke={"url('#gradient')"} strokeWidth='1' fill='#23282c' xlinkHref='#path-1' />
+          <use stroke={"url('#gradient')"} strokeWidth='1' fill='none' xlinkHref='#path-1' />
           <use stroke={"url('#gradient')"} strokeWidth='1' fill='none' xlinkHref='#path-3' />
           <use stroke={"url('#gradient')"} strokeWidth='2' fill='none' xlinkHref='#path-5' />
         </svg>

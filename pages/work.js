@@ -43,7 +43,7 @@ class Work extends Component {
             <Hero
               keywords={['design', 'deliver', 'adapt', 'software development', 'across platforms']}
               headline='I help clients design, adapt and deliver projects through
-              modern software development methodolgies and techniques across platforms.
+              modern software development methodologies and techniques across platforms.
               '
             />
             <HeroSub

@@ -39,7 +39,8 @@
     "import/no-extraneous-dependencies": 0,
     "arrow-body-style": [0, "as-needed"],
     "no-mix-operators": 0,
-    "new-cap": 0
+    "new-cap": 0,
+    "no-plusplus": 0
   },
   "plugins": [
     "react"

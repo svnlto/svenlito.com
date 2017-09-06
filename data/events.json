@@ -1,6 +1,29 @@
 [
   {
     "type": "work",
+    "date": "2017-02-28T14:00:00.000Z",
+    "company": {
+      "name": "McKinsey Digital Labs",
+      "desc": "McKinsey Digital Labs is a global management consulting firm."
+    },
+    "title": "Technology Specialist",
+    "desc": [
+      "I was hired to work with MDL in SouthEast Asia. During this time I have helped to design and implement a substantial part of the clients microservice based middleware layer. I also acted as a tech lead for one of the development teams."
+    ],
+    "extras": {
+      "tags": [
+        "NodeJS",
+        "Docker",
+        "GraphQL",
+        "ReactJS",
+        "ReactNative",
+        "Elixir",
+        "Kubernetes"
+      ]
+    }
+  },
+  {
+    "type": "work",
     "date": "2016-08-31T14:00:00.000Z",
     "company": {
       "name": "Comae",

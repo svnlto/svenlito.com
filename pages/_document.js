@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
           <meta charSet='utf-8' />
           <title>Sven Lito - FullStack JavaScript/NodeJS Developer</title>
           <meta name='keywords' content='Sven Lito Software Ltd, JavaScript Development and Consulting' />
-          <meta name='description' content='JavaScript, Development, Consultancy, React-Native, React.js, Redux, Node.js, NodeJS, Creative Coding' />
+          <meta name='description' content='JavaScript, Development, Consultancy, Node.js, GraphQL, Elixir, Erlang, React-Native, React.js, Redux, NodeJS, Creative Coding' />
           <meta name='author' content='Sven Lito' />
           <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1' />
           <link rel='icon' type='image/png' sizes='64x64' href='/static/favicon-64x64.png' />

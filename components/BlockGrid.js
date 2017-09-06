@@ -58,7 +58,7 @@ const styles = {
 
 const BlockGrid = (props) => {
   const backgroundImage = {
-    backgroundImage: `url(../images/work/${props.path}/thumb.png)`
+    backgroundImage: `url(/static/${props.path}-thumb.png)`
   };
 
   return (
