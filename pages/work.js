@@ -48,7 +48,7 @@ class Work extends Component {
             />
             <HeroSub
               headline='Areas I have worked in include containerisation, real-time communications,
-              memory forensics, offline-first as well as mobile and game development.'
+              memory forensics, fintech, offline-first as well as mobile and game development.'
             />
             <Timeline
               years={years}
