@@ -1,6 +1,5 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 module.exports = {
   lintOnSave: true,
@@ -18,14 +17,7 @@ module.exports = {
       plugins: [
         new PrerenderSPAPlugin({
           staticDir: path.join(__dirname, 'dist'),
-          routes: ['/', '/work', '/contact'],
-          renderer: new Renderer({
-            inject: {
-              foo: 'bar'
-            },
-            headless: false,
-            renderAfterDocumentEvent: 'render-event'
-          })
+          routes: ['/contact']
         })
       ]
     };
