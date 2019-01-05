@@ -33,7 +33,7 @@ export default {
 }
 
 .title {
-  width: 100%
+  width: 100%;
 }
 
 .full {
