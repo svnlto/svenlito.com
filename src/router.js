@@ -10,7 +10,7 @@ const NotFound = () => import('@/views/NotFound.vue');
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base:
     process.env.NODE_ENV === 'production'
@@ -20,27 +20,49 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home'
+      }
     },
     {
       path: '/work',
       name: 'work',
-      component: Work
+      component: Work,
+      meta: {
+        title: 'Work'
+      }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: Contact,
+      meta: {
+        title: 'Contact'
+      }
     },
     {
       path: '/thanks',
       name: 'thanks',
-      component: Thanks
+      component: Thanks,
+      meta: {
+        title: 'Thanks'
+      }
     },
     {
       path: '*',
       name: 'notFound',
-      component: NotFound
+      component: NotFound,
+      meta: {
+        title: 'Not Found'
+      }
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
+
+export default router;
