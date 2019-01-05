@@ -1,6 +1,6 @@
 <template>
-<div class="contact-form">
-  <form name="contact" method='POST' data-netlify="true" :action="url">
+<div>
+  <form name="contact" method='post' data-netlify="true" :action="url">
     <fieldset>
       <input
           key='1'
