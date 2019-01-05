@@ -1,11 +1,8 @@
 <template>
-  <div class="contact-form">
-    <form
-      action='https://formspree.io/me@svenlito.com'
-      method='POST'
-    >
-      <fieldset>
-        <input
+<div class="contact-form">
+  <form name="contact" method='POST' data-netlify="true" :action="url">
+    <fieldset>
+      <input
           key='1'
           class='field'
           type='text'
@@ -13,7 +10,7 @@
           placeholder='Full Name'
           required
         />
-        <input
+      <input
           key='2'
           class='field'
           type='email'
@@ -21,7 +18,7 @@
           placeholder='Email Address'
           required
         />
-        <textarea
+      <textarea
           key='3'
           class='field'
           type='message'
@@ -35,7 +32,6 @@
           value='Send message'
         />
       </fieldset>
-      <input type='hidden' name='_next' :value="url" />
     </form>
   </div>
 </template>
