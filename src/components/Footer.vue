@@ -32,7 +32,6 @@ export default {
 <style scoped>
 .legal {
   font-size: 12px;
-  color: #77797b;
 }
 
 .footer {

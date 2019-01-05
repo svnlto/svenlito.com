@@ -3,10 +3,8 @@
     <Column width='full'>
       <div class='hero'>
       <!-- eslint-disable-next-line -->
-      <h1 v-if="headline" :class="$mq" v-html="highlight()"/>
-      <div style="margin-top: 24px">
+      <h1 v-show="headline" :class="$mq" v-html="highlight()"/>
         <slot />
-      </div>
         <span v-if="link" class='link'>
           <RouterLink :to='link'>{{ text }} →</RouterLink>
         </span>
@@ -47,6 +45,10 @@ export default {
   },
   methods: {
     highlight() {
+      if (!this.keywords.length) {
+        return this.headline;
+      };
+
       const regex = new RegExp(this.keywords.join('|'), 'gi');
       return this.headline.replace(
         regex,
@@ -57,16 +59,28 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
+h1 {
+  font-family: $fontSans;
+  letter-spacing: -1px;
+
+  &.sm {
+    font-size: $alpha;
+    line-height: 60px;
+  }
+
+  &.md {
+    font-size: $mega;
+    line-height: 72px;
+  }
+}
+
 .hero {
   padding-top: 24px;
   background-position: 20px;
 }
 
-._ {
-  -webkit-text-decoration-color: #efafe7;
-  -webkit-text-decoration-line: underline;
-  -webkit-text-decoration-skip: ink;
+.hero >>> ._ {
   text-decoration-color: #efafe7;
   text-decoration-line: underline;
   text-decoration-skip: ink;

@@ -18,7 +18,7 @@ export default {
   justify-content: space-between;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 32px;
+  padding-bottom: 40px;
   position: relative;
   margin: auto;
 

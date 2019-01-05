@@ -41,10 +41,8 @@ li {
 a {
   font-size: 12px;
   margin: 0 10px 0 0;
-  color: #77797b;
 }
 
 .bullet {
-  color: #77797b;
 }
 </style>

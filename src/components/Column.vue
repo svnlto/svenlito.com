@@ -59,4 +59,10 @@ export default {
     width: 66.66%;
   }
 }
+
+h3 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
 </style>

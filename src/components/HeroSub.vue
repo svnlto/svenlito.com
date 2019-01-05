@@ -1,9 +1,7 @@
 <template>
   <Container>
     <Column width='full'>
-      <div class='hero'>
-      <h2 class='heading' v-if="headline"> {{ headline }} </h2>
-      </div>
+      <h2 v-if="headline"> {{ headline }} </h2>
     </Column>
   </Container>
 </template>
@@ -28,11 +26,21 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.heading {
+h2 {
+  -webkit-font-smoothing: antialiased;
+  font-family: $fontSans;
+  font-size: $gamma;
+  line-height: 36px;
   font-weight: lighter;
-}
 
-.hero {
-  padding: 32px 0 0 0;
+  &.sm {
+    font-size: $beta;
+    line-height: 48px;
+  }
+
+  &.md {
+    font-size: $mega;
+    line-height: 72px;
+  }
 }
 </style>

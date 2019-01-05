@@ -27,7 +27,7 @@
           required
         />
         <input
-          class='button white'
+          class='button'
           type='submit'
           value='Send message'
         />
@@ -48,8 +48,28 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: currentColor;
+}
+
+fieldset {
+  border: 0;
+}
+
+textarea {
+  min-height: 200px;
+  max-width: 100%;
+}
+
 input,
 textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  outline: none;
+  font-family: $fontMono;
+  font-size: $delta;
   background-color: transparent;
   position: relative;
   padding: 12px 16px;
@@ -64,24 +84,23 @@ textarea {
     opacity: 1;
     zindex: 1;
     transform: scale(1.01);
-    backgroundcolor: black;
+    background-color: $black;
   }
 }
 
 .button {
-  background-color: transparent;
+  color: $whiteDark10;
+  border-color: $darkGray;
   width: auto;
   border-width: 2px;
   border-style: solid;
-  border-color: gray;
-  padding: 8px 24px 8px 32px;
+  padding: 8px 24px;
   transition: 0.2s;
   cursor: pointer;
-}
 
-.white {
   &:hover {
-    color: pink;
+    color: $white;
+    border-color: $pink;
   }
 }
 </style>

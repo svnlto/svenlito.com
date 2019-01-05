@@ -1,7 +1,7 @@
 <template>
 <Container>
   <Column v-for="item in data" :key="item.date" width='half'>
-    <h2 class='company'>{{ item.title }} &bull; {{item.company.name}}</h2>
+    <h2 :class="$mq">{{ item.title }} &bull; {{item.company.name}}</h2>
     <div class="wrapper">
       <p>{{ item.company.desc }}</p>
       <p v-for="paragraph in item.desc" :key="paragraph">
@@ -37,19 +37,20 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.wrapper {
-  color: white;
-  font-size: 14px;
-  margin: 0 0 3em 0;
-}
-
-.company {
+h2 {
   display: inline-block;
-  background: rgba(17, 20, 21, 0.2);
-  color: white;
-  font-family: apercu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: $blackHighlight;
+  font-family: $fontSans;
+  font-size: $gamma;
+  line-height: 36px;
   padding: 0.1em 0.3em;
   margin: 0 0 0.7em -10px;
   font-weight: lighter;
+}
+
+.wrapper {
+  font-size: 14px;
+  margin: 0 0 3em 0;
 }
 </style>

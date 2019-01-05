@@ -1,14 +1,16 @@
 <template>
 <div id="app">
-  <ColourCursor color='rgba(43, 154, 129, .75)'>
+  <ColourCursor :color='cursorColor'>
     <Header />
-    <RouterView style="padding: 2rem 0; minHeight: 80vh" />
+    <RouterView style="padding: 1rem 0; minHeight: 80vh" />
     <Footer />
   </ColourCursor>
 </div>
 </template>
 
 <script>
+const config = require('@/config/index.js');
+
 const ColourCursor = () => import('@/components/ColourCursor.vue');
 const Header = () => import('@/components/Header.vue');
 const Footer = () => import('@/components/Footer.vue');
@@ -19,6 +21,11 @@ export default {
     ColourCursor,
     Header,
     Footer
+  },
+  data() {
+    return {
+      cursorColor: config.cursorGreen
+    };
   }
 };
 </script>
@@ -59,20 +66,20 @@ export default {
 html {
   box-sizing: border-box;
   font-size: 18px;
-  background-color: #23282c;
-  color: #e8e8e8;
+  color: $white;
   height: 100%;
+  background-color: $black;
 }
 
-::-moz-selection {
-  background: #77797b;
-  color: #e8e8e8;
-  text-shadow: none;
+body {
+  font-family: $fontMono;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 ::selection {
-  background: #77797b;
-  color: #e8e8e8;
+  background: $blackHighlight;
+  color: $white;
   text-shadow: none;
 }
 
@@ -85,47 +92,6 @@ html {
   margin: 0;
 }
 
-body {
-  font-family: iosevka;
-  font-weight: normal;
-  line-height: 1.5;
-}
-
-h1 {
-  font-size: 40px;
-  font-family: apercu;
-  line-height: 60px;
-  letter-spacing: -1px;
-
-  &.sm {
-    font-size: 38px;
-  }
-
-  &.md {
-    font-size: 48px;
-  }
-}
-
-h2 {
-  -webkit-font-smoothing: antialiased;
-  font-family: apercu;
-  font-size: 26px;
-  line-height: 1.3;
-
-  &.sm {
-    font-size: 26px;
-  }
-
-  &.md {
-    font-size: 48px;
-  }
-}
-
-h3 {
-  font-weight: normal;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
 
 p {
   margin-bottom: 20px;
@@ -146,32 +112,9 @@ li {
   list-style: none;
 }
 
-input,
-textarea {
-  -webkit-appearance: none;
-  border-radius: 0;
-  width: 100%;
-  outline: none;
-  font-family: iosevka;
-  font-size: 18px;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: currentColor;
-}
-
-fieldset {
-  border: 0;
-}
-
-textarea {
-  min-height: 200px;
-  max-width: 100%;
-}
 
 hr {
-  background-color: #77797b;
+  background-color: $lightGray;
   margin-top: 10px;
   margin-bottom: 60px;
   border: none;
