@@ -1,7 +1,7 @@
 <template>
   <ul v-if="links && links.length">
     <li v-for="(item, index) in links" :key="item.name">
-      <a :href="item.location">{{item.name}}</a>
+      <a :href="item.location" :class="$mq">{{item.name}}</a>
       <span class='bullet' v-if="index +1 !== links.length">&bull;</span>
     </li>
   </ul>
@@ -39,9 +39,17 @@ li {
 }
 
 a {
-  color: $white;
+  color: $whiteDark40;
   font-size: $delta;
   margin: 0 10px 0 0;
+
+  &.small {
+    font-size: $epsilon;
+  }
+}
+
+.bullet {
+  color: $whiteDark40;
 }
 
 </style>

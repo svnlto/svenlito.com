@@ -45,7 +45,7 @@ h2 {
   font-size: $gamma;
   line-height: 36px;
   padding: 0.1em 0.3em;
-  margin: 0 0 0.7em -10px;
+  margin: 0 0 1em -10px;
   font-weight: lighter;
 }
 

@@ -1,8 +1,8 @@
 <template>
   <Container>
     <Column width='full'>
-      <footer class="footer">
-        <div class="legal">© {{ year }} SvenLito Software Ltd.</div>
+      <footer>
+        <div :class="['legal', $mq]">© {{ year }} SvenLito Software Ltd.</div>
         <Social />
       </footer>
     </Column>
@@ -30,18 +30,18 @@ export default {
 </script>
 
 <style lang='postcss' scoped>
-.legal {
-  color: $white;
-  font-size: $delta;
-}
-
-.footer {
-  width: 100%;
-  margin: auto;
-  padding-top: 24px;
-  padding-bottom: 24px;
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.legal {
+  color: $whiteDark40;
+  font-size: $delta;
+
+  &.small {
+    font-size: $epsilon;
+  }
 }
 </style>

@@ -41,7 +41,7 @@ export default {
   name: 'ContactForm',
   data() {
     return {
-      url: 'http://svenlito.com/thanks'
+      url: '/thanks'
     };
   }
 };

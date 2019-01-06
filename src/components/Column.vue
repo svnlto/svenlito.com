@@ -55,7 +55,7 @@ export default {
 
 .half {
   &.medium {
-    width: 50%;
+    width: 100%;
   }
 
   &.large {

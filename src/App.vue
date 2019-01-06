@@ -2,7 +2,7 @@
 <div id="app">
   <ColourCursor :color='cursorColor'>
     <Header />
-    <RouterView style="padding: 1rem 0; minHeight: 80vh" />
+    <RouterView style="minHeight: 80vh" />
     <Footer />
   </ColourCursor>
 </div>

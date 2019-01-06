@@ -12,6 +12,8 @@ Vue.config.productionTip = false;
 const isProd = process.env.NODE_ENV === 'production';
 
 WebFont.load({
+  classes: false,
+  events: false,
   custom: {
     families: ['apercu, iosevka'],
     urls: ['/fonts.css']
