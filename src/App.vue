@@ -33,6 +33,7 @@ export default {
 <style lang="postcss">
 @font-face {
   font-family: apercu;
+  font-display: swap;
   src: url('/apercu-regular.woff2') format('woff2'),
     url('/apercu-regular.woff') format('woff');
   font-weight: normal;
@@ -41,6 +42,7 @@ export default {
 
 @font-face {
   font-family: apercu;
+  font-display: swap;
   src: url('/apercu-medium.woff2') format('woff2'),
     url('/apercu-medium.woff') format('woff');
   font-weight: 500;
@@ -49,6 +51,7 @@ export default {
 
 @font-face {
   font-family: apercu;
+  font-display: swap;
   src: url('/apercu-bold.woff2') format('woff2'),
     url('/apercu-bold.woff') format('woff');
   font-weight: bold;
@@ -57,6 +60,7 @@ export default {
 
 @font-face {
   font-family: iosevka;
+  font-display: swap;
   src: url('/iosevka-light.woff2') format('woff2'),
     url('/iosevka-light.woff') format('woff');
   font-weight: normal;
