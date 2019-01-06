@@ -4,26 +4,19 @@
     <fieldset>
       <input type="hidden" name="form-name" value="contact" />
       <input
-          key='1'
           class='field'
           type='text'
-          name='name'
           placeholder='Full Name'
           required
         />
       <input
-          key='2'
           class='field'
           type='email'
-          name='_replyto'
           placeholder='Email Address'
           required
         />
       <textarea
-          key='3'
           class='field'
-          type='message'
-          name='message'
           placeholder='Message'
           required
         />
