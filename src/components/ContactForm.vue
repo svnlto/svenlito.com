@@ -1,6 +1,6 @@
 <template>
 <div>
-  <form name="contact" method='POST' data-netlify="true" :action="url">
+  <form name="contact" method='POST' data-netlify="true">
     <fieldset>
       <input type="hidden" name="form-name" value="contact" />
       <input
@@ -39,12 +39,7 @@
 
 <script>
 export default {
-  name: 'ContactForm',
-  data() {
-    return {
-      url: 'https://www.svenlito.com/thanks'
-    };
-  }
+  name: 'ContactForm'
 };
 </script>
 
