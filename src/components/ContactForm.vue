@@ -42,7 +42,7 @@ export default {
   name: 'ContactForm',
   data() {
     return {
-      url: `${process.env.URL}/thanks`
+      url: 'https://www.svenlito.com/thanks'
     };
   }
 };
