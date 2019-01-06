@@ -1,7 +1,8 @@
 <template>
 <div>
-  <form name="contact" method='post' data-netlify="true" :action="url">
+  <form name="contact" method='POST' data-netlify="true" :action="url">
     <fieldset>
+      <input type="hidden" name="form-name" value="contact" />
       <input
           key='1'
           class='field'
@@ -41,7 +42,7 @@ export default {
   name: 'ContactForm',
   data() {
     return {
-      url: '/thanks'
+      url: `${process.env.URL}/thanks`
     };
   }
 };
