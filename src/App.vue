@@ -31,42 +31,6 @@ export default {
 </script>
 
 <style lang="postcss">
-@font-face {
-  font-family: apercu;
-  font-display: swap;
-  src: url('/apercu-regular.woff2') format('woff2'),
-    url('/apercu-regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: apercu;
-  font-display: swap;
-  src: url('/apercu-medium.woff2') format('woff2'),
-    url('/apercu-medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: apercu;
-  font-display: swap;
-  src: url('/apercu-bold.woff2') format('woff2'),
-    url('/apercu-bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: iosevka;
-  font-display: swap;
-  src: url('/iosevka-light.woff2') format('woff2'),
-    url('/iosevka-light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   box-sizing: border-box;
   color: $white;
