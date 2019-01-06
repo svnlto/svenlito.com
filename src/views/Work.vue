@@ -37,7 +37,7 @@ export default {
         'across platforms'
       ],
       heroHeadline: `I help clients design, adapt and deliver projects through modern software development methodologies and techniques across platforms.`,
-      subHeadline: `Areas I have worked in include containerisation, real-time communications, memory forensics, fintech, offline-first as well as mobile and game development.`
+      subHeadline: `Areas I have worked in include containerisation, real-time communications, memory forensics, fin-tech, offline-first as well as mobile and game development.`
     };
   },
   computed: {

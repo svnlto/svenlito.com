@@ -51,5 +51,4 @@ a {
 .bullet {
   color: $whiteDark40;
 }
-
 </style>

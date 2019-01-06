@@ -1,5 +1,4 @@
 <template>
-<div>
   <form name="contact" method='POST' data-netlify="true">
     <fieldset>
       <input type="hidden" name="form-name" value="contact" />
@@ -30,7 +29,6 @@
         />
       </fieldset>
     </form>
-  </div>
 </template>
 
 <script>

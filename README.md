@@ -1,4 +1,4 @@
-# svenlito_vue
+# svenlito.com
 
 ## Project setup
 ```
