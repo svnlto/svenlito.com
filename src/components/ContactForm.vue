@@ -6,17 +6,20 @@
       <input
           class='field'
           type='text'
+          name='name'
           placeholder='Full Name'
           required
         />
       <input
           class='field'
           type='email'
+          name='email'
           placeholder='Email Address'
           required
         />
       <textarea
           class='field'
+          name='message'
           placeholder='Message'
           required
         />
