@@ -1,6 +1,6 @@
 <template>
   <div class='column' :class="[width, $mq]">
-  <h3 v-if="title">{{ title }} </h3>
+  <h3 v-if="title">{{ title }}</h3>
     <slot />
   </div>
 </template>
@@ -23,12 +23,19 @@ export default {
 
 <style lang='postcss' scoped>
 .column {
-  padding-left: 24px;
-  padding-right: 24px;
+  &.small {
+    padding-left: $gamma;
+    padding-right: $gamma;
+  }
 
-  &.sm {
-    padding-left: 32px;
-    padding-right: 32px;
+  &.medium {
+    padding-left: $beta;
+    padding-right: $beta;
+  }
+
+  &.large {
+    padding-left: $alpha;
+    padding-right: $alpha;
   }
 }
 
@@ -37,32 +44,48 @@ export default {
 }
 
 .full {
-  &.md {
+  &.medium {
+    width: 100%;
+  }
+
+  &.large {
     width: 100%;
   }
 }
 
 .half {
-  &.md {
+  &.medium {
+    width: 50%;
+  }
+
+  &.large {
     width: 50%;
   }
 }
 
 .third {
-  &.md {
+  &.medium {
+    width: 33.33%;
+  }
+
+  &.large {
     width: 33.33%;
   }
 }
 
 .twoThird {
-  &.md {
+  &.medium {
+    width: 66.66%;
+  }
+
+  &.large {
     width: 66.66%;
   }
 }
 
 h3 {
   font-weight: normal;
-  font-size: 18px;
+  font-size: $delta;
   margin-bottom: 40px;
 }
 </style>

@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='postcss' scoped>
 li {
   display: inline-block;
   margin-right: 10px;
@@ -39,10 +39,9 @@ li {
 }
 
 a {
-  font-size: 12px;
+  color: $white;
+  font-size: $delta;
   margin: 0 10px 0 0;
 }
 
-.bullet {
-}
 </style>

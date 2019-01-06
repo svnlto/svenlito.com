@@ -21,8 +21,9 @@ Vue.use(VueAnalytics, {
 
 Vue.use(VueMq, {
   breakpoints: {
-    sm: 800,
-    md: Infinity
+    small: 479,
+    medium: 838,
+    large: Infinity
   }
 });
 

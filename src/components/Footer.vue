@@ -29,9 +29,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='postcss' scoped>
 .legal {
-  font-size: 12px;
+  color: $white;
+  font-size: $delta;
 }
 
 .footer {

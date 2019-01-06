@@ -22,7 +22,10 @@ export default {
   position: relative;
   margin: auto;
 
-  &.md {
+  &.medium {
+    display: flex;
+  }
+  &.large {
     display: flex;
   }
 }

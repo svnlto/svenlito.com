@@ -32,7 +32,7 @@ export default {
         'Functional Programming',
         'creating experiences for screen and mobile'
       ],
-      headline: `Hi, I'm Sven, a Freelance Full-Stack JavaScript Developer with a passion for Visual Arts, Distributed Systems and Functional Programming. I'm an expert in creating experiences for screen and mobile.`,
+      headline: `Hi, I'm Sven, a Full-Stack JavaScript Developer with a passion for Visual Arts, Distributed Systems and Functional Programming. I'm an expert in creating experiences for screen and mobile.`,
       link: '/contact',
       text: 'Talk to me'
     };

@@ -33,8 +33,6 @@ module.exports = {
   delta: '16px',
   epsilon: '8px',
   zeta: '12px',
-  fontRegular: 'normal',
-  fontBold: 'bold',
   fontMono: 'iosevka, monospace',
   fontSans: 'apercu, sans-serif'
 };

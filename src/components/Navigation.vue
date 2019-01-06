@@ -18,11 +18,16 @@ nav {
 }
 
 nav a {
-  margin-left: 20px;
-  display: inline;
-
-  &.sm {
+  &.small {
     margin-left: 10px;
+  }
+
+  &.medium {
+    margin-left: 10px;
+  }
+
+  &.large {
+    margin-left: 20px;
   }
 
   &.router-link-exact-active {

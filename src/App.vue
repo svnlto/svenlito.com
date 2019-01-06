@@ -65,21 +65,21 @@ export default {
 
 html {
   box-sizing: border-box;
-  font-size: 18px;
   color: $white;
   height: 100%;
   background-color: $black;
 }
 
 body {
+  font-size: $delta;
   font-family: $fontMono;
   font-weight: normal;
   line-height: 1.5;
 }
 
 ::selection {
-  background: $blackHighlight;
-  color: $white;
+  background: $cursorGreen;
+  color: inherit;
   text-shadow: none;
 }
 
@@ -92,12 +92,13 @@ body {
   margin: 0;
 }
 
-
 p {
   margin-bottom: 20px;
 }
 
 a {
+  display: inline;
+  font-size: $delta;
   color: inherit;
   text-decoration: none;
   padding-bottom: 1px;
@@ -111,7 +112,6 @@ a {
 li {
   list-style: none;
 }
-
 
 hr {
   background-color: $lightGray;

@@ -33,12 +33,12 @@ h2 {
   line-height: 36px;
   font-weight: lighter;
 
-  &.sm {
+  &.small {
     font-size: $beta;
     line-height: 48px;
   }
 
-  &.md {
+  &.medium {
     font-size: $mega;
     line-height: 72px;
   }

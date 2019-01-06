@@ -47,8 +47,7 @@ export default {
     highlight() {
       if (!this.keywords.length) {
         return this.headline;
-      };
-
+      }
       const regex = new RegExp(this.keywords.join('|'), 'gi');
       return this.headline.replace(
         regex,
@@ -64,12 +63,17 @@ h1 {
   font-family: $fontSans;
   letter-spacing: -1px;
 
-  &.sm {
+  &.small {
+    font-size: $beta;
+    line-height: $mega;
+  }
+
+  &.medium {
     font-size: $alpha;
     line-height: 60px;
   }
 
-  &.md {
+  &.large {
     font-size: $mega;
     line-height: 72px;
   }
@@ -91,7 +95,7 @@ h1 {
   display: table;
   border-bottom: 1px solid;
 
-  &.md {
+  &.medium {
     display: flex;
     margin-top: 80px;
   }
