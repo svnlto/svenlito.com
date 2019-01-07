@@ -1,13 +1,14 @@
 <template>
 <Container>
-  <Column v-for="item in data" :key="item.date" width='half'>
-    <h2 :class="$mq">{{ item.title }} &bull; {{item.company.name}}</h2>
+  <Column
+    v-for="edge in events.edges"
+    :key="edge.node.createdAt"
+    width='half'>
+    <h2 :class="$mq">{{ edge.node.title }} &bull; {{ edge.node.companies[0].name}}</h2>
     <div class="wrapper">
-      <p>{{ item.company.desc }}</p>
-      <p v-for="paragraph in item.desc" :key="paragraph">
-        {{ paragraph }}
-      </p>
-      <Taglist :data='item.extras.tags' />
+      <p>{{ edge.node.companies[0].description }}</p>
+      <VueMarkdown>{{ edge.node.description }}</VueMarkdown>
+      <Taglist :data='edge.node.tags' />
     </div>
   </Column>
 </Container>
@@ -19,19 +20,28 @@ import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Taglist from '@/components/Taglist.vue';
+import VueMarkdown from 'vue-markdown';
 
 export default Vue.extend({
   name: 'Timeline',
   components: {
     Container,
     Column,
-    Taglist
+    Taglist,
+    VueMarkdown
   },
   props: {
-    data: {
-      type: Array,
+    events: {
+      type: Object,
       default() {
-        return [];
+        return {
+          edges: [{
+            title: {
+              type: String,
+              default: ''
+            }
+          }]
+        };
       }
     }
   }

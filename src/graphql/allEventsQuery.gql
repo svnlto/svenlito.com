@@ -1,0 +1,34 @@
+query all_events_query(
+  $first: Int
+  $skip: Int
+  $where: EventWhereInput
+  $orderBy: EventOrderByInput
+) {
+  events: eventsConnection(
+    first: $first
+    skip: $skip
+    where: $where
+    orderBy: $orderBy
+  ) {
+    edges {
+      node {
+        id
+        createdAt
+        updatedAt
+        status
+        date
+        title
+        description
+        tags
+        companies {
+          id
+          createdAt
+          updatedAt
+          status
+          name
+          description
+        }
+      }
+    }
+  }
+}

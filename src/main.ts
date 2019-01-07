@@ -5,10 +5,9 @@ import WebFont from 'webfontloader';
 
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import { createProvider } from './vue-apollo';
 
 Vue.config.productionTip = false;
-
 const isProd = process.env.NODE_ENV === 'production';
 
 WebFont.load({
@@ -39,6 +38,6 @@ Vue.use(VueMq, {
 
 new Vue({
   router,
-  store,
+  apolloProvider: createProvider(),
   render: (h) => h(App)
 }).$mount('#app');
