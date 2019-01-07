@@ -7,8 +7,10 @@
   </ul>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'Social',
   data() {
     return {
@@ -28,7 +30,7 @@ export default {
       ]
     };
   }
-};
+});
 </script>
 
 <style lang='postcss' scoped>

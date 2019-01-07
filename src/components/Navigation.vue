@@ -5,11 +5,11 @@
     <RouterLink to='/contact' :class="$mq">Contact</RouterLink>
   </nav>
 </template>
-
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
   name: 'Navigation'
-};
+});
 </script>
 
 <style lang="postcss" scoped>

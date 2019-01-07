@@ -8,14 +8,15 @@
 </div>
 </template>
 
-<script>
-const config = require('@/config/index.js');
+<script lang="ts">
+const config = require('./config');
+import Vue from 'vue';
 
 const ColourCursor = () => import('@/components/ColourCursor.vue');
 const Header = () => import('@/components/Header.vue');
 const Footer = () => import('@/components/Footer.vue');
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
     ColourCursor,
@@ -27,7 +28,7 @@ export default {
       cursorColor: config.cursorGreen
     };
   }
-};
+});
 </script>
 
 <style lang="postcss">

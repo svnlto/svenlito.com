@@ -9,12 +9,13 @@
   </Container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Social from '@/components/Social.vue';
 
-export default {
+export default Vue.extend({
   name: 'Footer',
   components: {
     Container,
@@ -22,12 +23,13 @@ export default {
     Social
   },
   computed: {
-    year() {
+    year(): number {
       return new Date().getFullYear();
     }
   }
-};
+});
 </script>
+
 
 <style lang='postcss' scoped>
 footer {

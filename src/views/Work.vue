@@ -11,14 +11,16 @@
 </Container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Hero from '@/components/Hero.vue';
 import HeroSub from '@/components/HeroSub.vue';
 import Timeline from '@/components/Timeline.vue';
 
-export default {
+export default Vue.extend({
   name: 'Work',
   components: {
     Container,
@@ -41,9 +43,10 @@ export default {
     };
   },
   computed: {
-    events() {
+    events(): string[] {
       return this.$store.state.events;
     }
   }
-};
+
+});
 </script>

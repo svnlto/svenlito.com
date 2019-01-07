@@ -10,10 +10,12 @@
   </ul>
 </template>
 
-<script>
-import { getRandomPinkArray } from '@/utils/index.js';
+<script lang="ts">
+import Vue from 'vue';
 
-export default {
+import { getRandomPinkArray } from '@/utils/index';
+
+export default Vue.extend({
   name: 'Taglist',
   props: {
     data: {
@@ -24,11 +26,11 @@ export default {
     }
   },
   computed: {
-    getRandomPinkValue() {
-      return getRandomPinkArray(this.data.length);
+    getRandomPinkValue(): string[] {
+      return getRandomPinkArray((this.data as any).length);
     }
   }
-};
+});
 </script>
 
 <style lang='postcss' scoped>

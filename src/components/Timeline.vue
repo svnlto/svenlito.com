@@ -13,12 +13,14 @@
 </Container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Taglist from '@/components/Taglist.vue';
 
-export default {
+export default Vue.extend({
   name: 'Timeline',
   components: {
     Container,
@@ -33,7 +35,7 @@ export default {
       }
     }
   }
-};
+});
 </script>
 
 <style lang="postcss" scoped>

@@ -9,13 +9,13 @@
   </Container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Logo from '@/components/Logo.vue';
 import Navigation from '@/components/Navigation.vue';
-
-export default {
+export default Vue.extend({
   name: 'Header',
   components: {
     Container,
@@ -23,7 +23,7 @@ export default {
     Logo,
     Navigation
   }
-};
+});
 </script>
 
 <style scoped>

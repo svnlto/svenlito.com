@@ -5,8 +5,9 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
   name: 'Column',
   props: {
     width: {
@@ -18,7 +19,7 @@ export default {
       default: ''
     }
   }
-};
+});
 </script>
 
 <style lang='postcss' scoped>

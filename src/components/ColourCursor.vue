@@ -2,8 +2,10 @@
   <div><slot /></div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'ColourCursor',
   props: {
     color: {
@@ -16,8 +18,8 @@ export default {
   },
   methods: {
     draw() {
-      const cursor = document.createElement('canvas');
-      const ctx = cursor.getContext('2d');
+      const cursor: HTMLCanvasElement = document.createElement('canvas');
+      const ctx: CanvasRenderingContext2D = cursor.getContext('2d')!;
       const { $el, color } = this;
       const radius = 15 / 2;
 
@@ -29,8 +31,9 @@ export default {
       ctx.fillStyle = color;
       ctx.fill();
 
-      $el.style.cursor = `url(${cursor.toDataURL()}), auto`;
+      ($el as any).style.cursor = `url(${cursor.toDataURL()}), auto`;
     }
   }
-};
+});
 </script>
+

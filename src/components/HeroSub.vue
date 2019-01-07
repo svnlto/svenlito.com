@@ -5,12 +5,11 @@
     </Column>
   </Container>
 </template>
-
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
-
-export default {
+export default Vue.extend({
   name: 'HeroSub',
   components: {
     Container,
@@ -22,7 +21,7 @@ export default {
       default: ''
     }
   }
-};
+});
 </script>
 
 <style lang="postcss" scoped>

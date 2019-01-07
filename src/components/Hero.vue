@@ -12,12 +12,11 @@
     </Column>
   </Container>
 </template>
-
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
-
-export default {
+export default Vue.extend({
   name: 'Hero',
   components: {
     Container,
@@ -44,18 +43,17 @@ export default {
     }
   },
   methods: {
-    highlight() {
-      if (!this.keywords.length) {
-        return this.headline;
+    highlight(): string {
+      if (!this.$props.keywords.length) {
+        return this.$props.headline;
       }
-      const regex = new RegExp(this.keywords.join('|'), 'gi');
-      return this.headline.replace(
-        regex,
-        match => '<span class="_">' + match + '</span>'
+      const regex = new RegExp(this.$props.keywords.join('|'), 'gi');
+      return this.$props.headline.replace(regex,
+        (match: string) => '<span class="_">' + match + '</span>'
       );
     }
   }
-};
+});
 </script>
 
 <style lang="postcss" scoped>

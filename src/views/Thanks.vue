@@ -8,18 +8,18 @@
     </Column>
   </Container>
 </template>
-
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import Container from '@/components/Container.vue';
 import Column from '@/components/Column.vue';
 import Hero from '@/components/Hero.vue';
 
-export default {
+export default Vue.extend({
   name: 'Thanks',
   components: {
     Container,
     Column,
     Hero
   }
-};
+});
 </script>

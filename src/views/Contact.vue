@@ -15,13 +15,14 @@
   </Container>
 </template>
 
-<script>
-import Container from '@/components/Container';
-import Column from '@/components/Column';
-import ContactForm from '@/components/ContactForm';
-import Hero from '@/components/Hero';
+<script lang="ts">
+import Vue from 'vue';
+import Container from '@/components/Container.vue';
+import Column from '@/components/Column.vue';
+import ContactForm from '@/components/ContactForm.vue';
+import Hero from '@/components/Hero.vue';
 
-export default {
+export default Vue.extend({
   name: 'Contact',
   components: {
     Container,
@@ -29,5 +30,5 @@ export default {
     ContactForm,
     Hero
   }
-};
+});
 </script>
