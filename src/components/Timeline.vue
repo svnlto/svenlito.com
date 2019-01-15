@@ -2,7 +2,7 @@
 <Container>
   <Column v-for="event in events" :key="event.id" width='half'>
     <div class="wrapper">
-    <h3 :class="$mq">{{ event.title }} &bull; {{ event.companies[0].name}}</h3>
+    <h3 :class="[$mq, 'title']">{{ event.title }} &bull; {{ event.companies[0].name}}</h3>
       <p>{{ event.companies[0].description }}</p>
       <VueMarkdown>{{ event.description }}</VueMarkdown>
       <Taglist :data='event.tags' />
@@ -39,7 +39,7 @@ export default Vue.extend({
 </script>
 
 <style lang="postcss" scoped>
-h3 {
+.title {
   -webkit-font-smoothing: antialiased;
   background: $black;
   font-family: $fontSans;
