@@ -39,22 +39,8 @@ export default Vue.extend({
 </script>
 
 <style lang="postcss" scoped>
-h2 {
-  /* display: inline-block; */
-  -webkit-font-smoothing: antialiased;
-  /* background: $blackHighlight; */
-  font-family: $fontSans;
-  font-size: $gamma;
-  line-height: 36px;
-  padding: 0.1em 0.3em;
-  margin: 0 0 1em -10px;
-  font-weight: lighter;
-}
-
 h3 {
-  /* display: inline-block; */
   -webkit-font-smoothing: antialiased;
-  /* border-top: 1px solid #efafe770; */
   background: $black;
   font-family: $fontSans;
   font-size: $gamma;
