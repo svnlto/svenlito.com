@@ -1,14 +1,11 @@
 <template>
 <Container>
-  <Column
-    v-for="edge in events.edges"
-    :key="edge.node.createdAt"
-    width='half'>
-    <h2 :class="$mq">{{ edge.node.title }} &bull; {{ edge.node.companies[0].name}}</h2>
+  <Column v-for="event in events" :key="event.id" width='half'>
     <div class="wrapper">
-      <p>{{ edge.node.companies[0].description }}</p>
-      <VueMarkdown>{{ edge.node.description }}</VueMarkdown>
-      <Taglist :data='edge.node.tags' />
+    <h3 :class="$mq">{{ event.title }} &bull; {{ event.companies[0].name}}</h3>
+      <p>{{ event.companies[0].description }}</p>
+      <VueMarkdown>{{ event.description }}</VueMarkdown>
+      <Taglist :data='event.tags' />
     </div>
   </Column>
 </Container>
@@ -32,16 +29,9 @@ export default Vue.extend({
   },
   props: {
     events: {
-      type: Object,
+      type: Array,
       default() {
-        return {
-          edges: [{
-            title: {
-              type: String,
-              default: ''
-            }
-          }]
-        };
+        return [];
       }
     }
   }
@@ -50,9 +40,9 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 h2 {
-  display: inline-block;
+  /* display: inline-block; */
   -webkit-font-smoothing: antialiased;
-  background: $blackHighlight;
+  /* background: $blackHighlight; */
   font-family: $fontSans;
   font-size: $gamma;
   line-height: 36px;
@@ -61,7 +51,21 @@ h2 {
   font-weight: lighter;
 }
 
+h3 {
+  /* display: inline-block; */
+  -webkit-font-smoothing: antialiased;
+  /* border-top: 1px solid #efafe770; */
+  background: $black;
+  font-family: $fontSans;
+  font-size: $gamma;
+  line-height: 36px;
+  padding: 1em 1.3em 1em .1em;
+  font-weight: lighter;
+}
+
 .wrapper {
+  background: $blackHighlight;
+  padding: 1em;
   margin: 0 0 3em 0;
 }
 </style>

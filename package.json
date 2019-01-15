@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@types/color": "^3.0.0",
     "@types/graphql": "^14.0.4",
     "@types/webfontloader": "^1.6.29",
     "apollo-boost": "^0.1.23",

@@ -27,6 +27,7 @@ module.exports = {
   whiteDark40: color('#e8e8e8')
     .darken(0.4)
     .string(),
+  blackHighlight10: 'rgba(17, 20, 21, .1)',
   tera: '64px',
   giga: '56px',
   mega: '48px',
