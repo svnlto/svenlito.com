@@ -1,0 +1,122 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - next > babel-plugin-transform-class-properties > babel-helper-function-name > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > write-file-webpack-plugin > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-plugin-transform-react-remove-prop-types > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-register > babel-core > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-block-scoping > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-plugin-transform-es2015-modules-commonjs > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-parameters > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-plugin-transform-class-properties > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-plugin-transform-class-properties > babel-helper-function-name > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-object-super > babel-helper-replace-supers > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-umd > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-systemjs > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-function-name > babel-helper-function-name > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-async-to-generator > babel-helper-remap-async-to-generator > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-replace-supers > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-parameters > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-computed-properties > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-parameters > babel-helper-call-delegate > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-register > babel-core > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-block-scoping > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-commonjs > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > send > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-function-name > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-umd > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-function-name > babel-helper-function-name > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > babel-helper-function-name > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-exponentiation-operator > babel-helper-builder-binary-assignment-operator-visitor > babel-helper-explode-assignable-expression > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-register > babel-core > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-async-to-generator > babel-helper-remap-async-to-generator > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-replace-supers > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-object-super > babel-helper-replace-supers > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-async-to-generator > babel-helper-remap-async-to-generator > babel-helper-function-name > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-amd > babel-plugin-transform-es2015-modules-commonjs > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-function-name > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > babel-helper-function-name > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-async-to-generator > babel-helper-remap-async-to-generator > babel-helper-function-name > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-preset-env > babel-plugin-transform-es2015-modules-umd > babel-plugin-transform-es2015-modules-amd > babel-plugin-transform-es2015-modules-commonjs > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:extend:20180424':
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:hoek:20180212':
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2019-06-19T09:35:44.114Z'
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:mime:20170907':
+    - next > webpack-dev-middleware > mime:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:moment:20170905':
+    - next > write-file-webpack-plugin > moment:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:stringstream:20180511':
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2019-06-19T09:35:44.114Z'
+  'npm:tough-cookie:20170905':
+    - next > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2019-06-19T09:35:44.114Z'
