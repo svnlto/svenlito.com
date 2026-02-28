@@ -29,12 +29,15 @@
       color: #1a1a1a;
       background: #fff;
       -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr auto;
     }
 
     main {
       max-width: 40rem;
       margin: 0 auto;
-      padding: 25vh 2rem 4rem;
+      padding: 25vh 2rem 0;
     }
 
     h1 {
@@ -57,7 +60,6 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      margin-bottom: 6rem;
     }
 
     nav a, .email-btn {
@@ -96,13 +98,16 @@
       font-size: 0.75rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      padding: 2rem 2rem;
+      max-width: 40rem;
+      margin: 0 auto;
     }
 
     @media (max-width: 600px) {
-      main { padding: 15vh 1.5rem 3rem; }
+      main { padding: 15vh 1.5rem 0; }
       h1 { margin-bottom: 3rem; }
       .bio { margin-bottom: 3rem; }
-      nav ul { margin-bottom: 4rem; }
+      .footer { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -126,9 +131,9 @@
         </li>
       </ul>
     </nav>
-
-    <p class="footer">Last updated {{ now.Year }}</p>
   </main>
+
+  <p class="footer">Last updated {{ now.Year }}</p>
 
   <script>
     (function () {
@@ -152,7 +157,7 @@
       var btn = document.getElementById('email-btn');
       var hint = document.getElementById('email-hint');
 
-      display.textContent = scramble(email);
+      display.textContent = scramble('e@m.l');
 
       btn.addEventListener('click', function () {
         if (revealed) return;
