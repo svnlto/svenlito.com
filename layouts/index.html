@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sven Lito</title>
+  <meta name="description" content="Engineering leader & cloud architect, open-source contributor, homelab enthusiast. 24 years of building things that scale.">
+  <meta name="author" content="Sven Lito">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="Engineering leader & cloud architect, open-source contributor, homelab enthusiast.">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="Engineering leader & cloud architect, open-source contributor, homelab enthusiast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 25vh 2rem 4rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 4rem;
+    }
+
+    .bio {
+      color: #636363;
+      font-weight: 300;
+      max-width: 28rem;
+      margin-bottom: 4rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 6rem;
+    }
+
+    nav a, .email-btn {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover, .email-btn:hover { color: #636363; }
+
+    .arrow {
+      color: #c0c0c0;
+      margin-right: 0.75rem;
+      display: inline-block;
+    }
+
+    .email-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+    }
+
+    .hint {
+      color: #c0c0c0;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+
+    .footer {
+      color: #c0c0c0;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 15vh 1.5rem 3rem; }
+      h1 { margin-bottom: 3rem; }
+      .bio { margin-bottom: 3rem; }
+      nav ul { margin-bottom: 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sven<br>Lito</h1>
+
+    <p class="bio">
+      Engineering leader &amp; cloud architect,<br>
+      open-source contributor, homelab enthusiast.<br>
+      24 years of building things that scale.
+    </p>
+
+    <nav>
+      <ul>
+        <li><span class="arrow">&rarr;</span><a href="https://github.com/svnlto" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li><span class="arrow">&rarr;</span><a href="https://www.linkedin.com/in/sven-lito-23787689/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>
+          <span class="arrow">&rarr;</span><button class="email-btn" id="email-btn" title="Click to reveal email"><span id="email-display"></span></button>
+          <span class="hint" id="email-hint">(click to reveal)</span>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="footer">Last updated {{ now.Year }}</p>
+  </main>
+
+  <script>
+    (function () {
+      // email stored as char codes to deter scrapers
+      var e = [115,118,101,110,108,46,115,116,114,97,105,110,101,100,56,52,55,64,112,97,115,115,109,97,105,108,46,110,101,116];
+      var email = e.map(function(c) { return String.fromCharCode(c); }).join('');
+      var revealed = false;
+
+      function rand() {
+        return String.fromCharCode(33 + Math.floor(Math.random() * 94));
+      }
+
+      function scramble(str) {
+        return str.split('').map(function (c) {
+          if (c === '@' || c === '.') return c;
+          return rand();
+        }).join('');
+      }
+
+      var display = document.getElementById('email-display');
+      var btn = document.getElementById('email-btn');
+      var hint = document.getElementById('email-hint');
+
+      display.textContent = scramble(email);
+
+      btn.addEventListener('click', function () {
+        if (revealed) return;
+        var iterations = 0;
+        var interval = setInterval(function () {
+          display.textContent = email.split('').map(function (c, i) {
+            return i <= iterations ? c : rand();
+          }).join('');
+          iterations++;
+          if (iterations >= email.length) {
+            clearInterval(interval);
+            revealed = true;
+            hint.style.display = 'none';
+            var link = document.createElement('a');
+            link.href = 'mailto:' + email;
+            link.textContent = email;
+            btn.replaceWith(link);
+          }
+        }, 30);
+      });
+    })();
+  </script>
+</body>
+</html>

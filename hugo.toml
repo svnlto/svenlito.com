@@ -1,0 +1,11 @@
+baseURL = "https://svenlito.com"
+languageCode = "en-uk"
+title = "Sven Lito"
+
+[taxonomies]
+
+[build]
+  writeStats = false
+
+[minify]
+  minifyOutput = true
