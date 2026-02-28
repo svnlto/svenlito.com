@@ -16,22 +16,24 @@ hugo --minify
 
 Output goes to `public/`.
 
-## Deploy to Cloudflare
+## Deploy
 
-Deployed via [Cloudflare Workers](https://developers.cloudflare.com/workers/) with static assets. Configuration lives in `wrangler.toml`.
+Deployed to [GitHub Pages](https://pages.github.com/) via GitHub Actions (`.github/workflows/deploy.yml`). Pushes to `main` trigger automatic builds.
 
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages**
-2. **Create** → **Connect to Git** → select the `svnlto/svenlito.com` repo
-3. Leave the **Build command** as `hugo --minify`
-4. Leave **Deploy command** blank — `wrangler.toml` handles it
-5. Add environment variable `HUGO_VERSION` = `0.155.3`
-6. **Save and Deploy**
+### Setup
 
-Pushes to `main` trigger automatic rebuilds.
+1. Repo **Settings** → **Pages** → Source: **GitHub Actions**
+2. Repo **Settings** → **Pages** → Custom domain: `svenlito.com`
+3. Enable **Enforce HTTPS**
 
-### Custom domain
+### DNS (ClouDNS)
 
-1. In your project → **Settings** → **Domains & Routes**
-2. Add `svenlito.com`
-3. Point nameservers to Cloudflare — DNS records are created automatically
+Add A records for the apex domain:
+
+```
+svenlito.com  A  185.199.108.153
+svenlito.com  A  185.199.109.153
+svenlito.com  A  185.199.110.153
+svenlito.com  A  185.199.111.153
+```
 
