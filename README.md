@@ -16,22 +16,22 @@ hugo --minify
 
 Output goes to `public/`.
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare
 
-1. Push this repo to GitHub
-2. Go to [Cloudflare Pages](https://pages.cloudflare.com/)
-3. Create a new project → Connect to your GitHub repo
-4. Build settings:
-   - **Framework preset**: Hugo
-   - **Build command**: `hugo --minify`
-   - **Build output directory**: `public`
-   - **Environment variable**: `HUGO_VERSION` = `0.139.0`
-5. Deploy
-6. In **Custom domains**, add `svenlito.com` and follow the DNS instructions
+Deployed via [Cloudflare Workers](https://developers.cloudflare.com/workers/) with static assets. Configuration lives in `wrangler.toml`.
 
-Cloudflare Pages gives you:
-- Unlimited bandwidth (free tier)
-- Automatic HTTPS
-- Global CDN
-- Automatic deploys on push to main
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages**
+2. **Create** → **Connect to Git** → select the `svnlto/svenlito.com` repo
+3. Leave the **Build command** as `hugo --minify`
+4. Leave **Deploy command** blank — `wrangler.toml` handles it
+5. Add environment variable `HUGO_VERSION` = `0.155.3`
+6. **Save and Deploy**
+
+Pushes to `main` trigger automatic rebuilds.
+
+### Custom domain
+
+1. In your project → **Settings** → **Domains & Routes**
+2. Add `svenlito.com`
+3. Point nameservers to Cloudflare — DNS records are created automatically
 
