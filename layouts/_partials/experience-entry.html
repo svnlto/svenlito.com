@@ -1,0 +1,12 @@
+<article class="xp">
+  <div class="xp-meta">
+    <span class="xp-dates">
+      {{- if .present }}{{ $parts := split .dates "—" }}{{ index $parts 0 }}— <span class="present">Present</span>
+      {{- else }}{{ .dates }}{{ end -}}
+    </span>
+    <span class="xp-loc">{{ .location }}</span>
+  </div>
+  <h3 class="xp-title">{{ .title }}{{ with .accent }} <span class="xp-accent">— {{ . }}</span>{{ end }}</h3>
+  <p class="xp-company"><span class="co">{{ .company }}</span> <span class="dot">●</span> <span class="desc">{{ .descriptor }}</span></p>
+  {{ range .body }}<p class="body">{{ . }}</p>{{ end }}
+</article>

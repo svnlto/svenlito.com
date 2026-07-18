@@ -67,6 +67,16 @@
     .meter { display: inline-flex; gap: 4px; }
     .meter .seg { width: 14px; height: 5px; background: var(--hairline); }
     .meter .seg.on { background: var(--teal); }
+    .xp { padding: 1.4rem 0; border-bottom: 1px solid var(--hairline); }
+    .xp:last-child { border-bottom: 0; }
+    .xp-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--meta); display: flex; flex-direction: column; gap: 0.15rem; margin-bottom: 0.5rem; }
+    .xp-meta .present { color: var(--teal); }
+    .xp-title { font-family: var(--serif); font-variation-settings: 'opsz' 36, 'wght' 400; font-size: 1.4rem; color: var(--ink); line-height: 1.15; }
+    .xp-title .xp-accent { font-style: oblique 10deg; color: var(--accent-gray); font-size: 1.05rem; }
+    .xp-company { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink); margin: 0.3rem 0 0.7rem; }
+    .xp-company .dot { color: var(--teal); }
+    .xp-company .desc { color: var(--meta); }
+    .xp .body + .body { margin-top: 0.6rem; }
   </style>
 </head>
 <body>
@@ -109,6 +119,12 @@
           {{ partial "skill-row.html" (dict "i" (add $i 1) "skill" $s) }}
         {{ end }}
       </div>
+    </section>
+    {{ end }}
+    {{ with hugo.Data.cv.experience }}
+    <section class="section" id="experience">
+      {{ partial "section-header.html" (dict "marker" "03" "label" "Trajectory" "title" "PROFESSIONAL EXPERIENCE" "annotation" "") }}
+      {{ range .items }}{{ partial "experience-entry.html" . }}{{ end }}
     </section>
     {{ end }}
   </main>
