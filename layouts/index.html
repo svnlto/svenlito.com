@@ -60,6 +60,13 @@
     .annotation { font-family: var(--mono); font-size: 12px; line-height: 1.5; color: var(--meta); margin-bottom: 1.25rem; }
     .pull-quote { font-family: var(--serif); font-variation-settings: 'opsz' 60, 'wght' 400; font-size: 1.5rem; line-height: 1.3; color: var(--ink); margin-bottom: 1.1rem; }
     .body { font-family: var(--sans); font-size: 15px; line-height: 1.6; color: var(--ink-body); max-width: 42rem; }
+    .skills { display: grid; gap: 0; }
+    .skill-row { display: grid; grid-template-columns: 2rem 1fr auto; align-items: center; gap: 0.6rem; padding: 0.55rem 0; border-bottom: 1px dashed var(--hairline); }
+    .skill-idx { font-family: var(--mono); font-size: 11px; color: var(--meta); }
+    .skill-name { font-family: var(--sans); font-size: 14px; color: var(--ink); }
+    .meter { display: inline-flex; gap: 4px; }
+    .meter .seg { width: 14px; height: 5px; background: var(--hairline); }
+    .meter .seg.on { background: var(--teal); }
   </style>
 </head>
 <body>
@@ -92,6 +99,16 @@
       {{ partial "section-header.html" (dict "marker" "01" "label" "Profile" "title" "EXECUTIVE SUMMARY" "annotation" .annotation) }}
       <p class="pull-quote">{{ .quote }}</p>
       <p class="body">{{ .body }}</p>
+    </section>
+    {{ end }}
+    {{ with hugo.Data.cv.capabilities }}
+    <section class="section" id="capabilities">
+      {{ partial "section-header.html" (dict "marker" "02" "label" "Capabilities" "title" "CORE SKILLS" "annotation" .annotation) }}
+      <div class="skills">
+        {{ range $i, $s := .skills }}
+          {{ partial "skill-row.html" (dict "i" (add $i 1) "skill" $s) }}
+        {{ end }}
+      </div>
     </section>
     {{ end }}
   </main>

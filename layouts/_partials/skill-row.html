@@ -1,0 +1,9 @@
+{{ $filled := int (math.Round (mul .skill.level 5)) }}
+<div class="skill-row">
+  <span class="skill-idx">{{ printf "%02d" .i }}</span>
+  <span class="skill-name">{{ .skill.name }}</span>
+  <span class="skill-leader"></span>
+  <span class="meter" aria-hidden="true">
+    {{ range seq 5 }}<span class="seg {{ if le . $filled }}on{{ end }}"></span>{{ end }}
+  </span>
+</div>
