@@ -100,6 +100,12 @@
     .footer { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--meta); padding-top: 0; }
     .email-btn { font: inherit; color: var(--teal); background: none; border: 0; padding: 0; cursor: pointer; }
     .hint { color: var(--hairline); margin-left: 0.4rem; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+    @media (max-width: 520px) {
+      .wordmark { font-size: clamp(2.5rem, 13vw, 3rem); }
+      .availability { font-size: 10px; }
+      .contact { grid-template-columns: 3rem 1fr; }
+    }
   </style>
 </head>
 <body>
