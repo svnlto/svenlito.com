@@ -97,6 +97,9 @@
     .cg-items { font-family: var(--sans); font-size: 14px; line-height: 1.7; color: var(--ink); }
     .cg-name { font-weight: 500; }
     .cg-meta { font-family: var(--mono); font-size: 11px; color: var(--meta); }
+    .footer { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--meta); padding-top: 0; }
+    .email-btn { font: inherit; color: var(--teal); background: none; border: 0; padding: 0; cursor: pointer; }
+    .hint { color: var(--hairline); margin-left: 0.4rem; }
   </style>
 </head>
 <body>
@@ -112,8 +115,11 @@
         <div class="contact">
           <dt>{{ .label }}</dt>
           <dd>
-            {{- if .href }}<a href="{{ .href | safeURL }}">{{ .value }}</a>
-            {{- else }}{{ .value }}{{ end -}}
+            {{- if .obfuscate -}}
+              <button class="email-btn" id="email-btn" title="Click to reveal email"><span id="email-display"></span></button><span class="hint" id="email-hint">(click to reveal)</span>
+            {{- else if .href -}}
+              <a href="{{ .href | safeURL }}">{{ .value }}</a>
+            {{- else -}}{{ .value }}{{- end -}}
           </dd>
         </div>
         {{ end }}
@@ -172,6 +178,37 @@
     </section>
     {{ end }}
   </main>
-  <footer class="wrap" style="padding-top:0"><!-- footer added in Task 12 --></footer>
+  <footer class="wrap footer">Last updated {{ now.Year }}</footer>
+  <script>
+    (function () {
+      // "me@svenlito.com" as char codes to deter scrapers
+      var e = [109,101,64,115,118,101,110,108,105,116,111,46,99,111,109];
+      var email = e.map(function (c) { return String.fromCharCode(c); }).join('');
+      var display = document.getElementById('email-display');
+      var btn = document.getElementById('email-btn');
+      var hint = document.getElementById('email-hint');
+      if (!display || !btn) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function rand() { return String.fromCharCode(33 + Math.floor(Math.random() * 94)); }
+      function scramble(str) { return str.split('').map(function (c) { return (c === '@' || c === '.') ? c : rand(); }).join(''); }
+      function finish() {
+        hint.style.display = 'none';
+        var link = document.createElement('a');
+        link.href = 'mailto:' + email; link.textContent = email;
+        btn.replaceWith(link);
+      }
+      display.textContent = scramble(email);
+      var revealed = false;
+      btn.addEventListener('click', function () {
+        if (revealed) return; revealed = true;
+        if (reduce) { display.textContent = email; finish(); return; }
+        var i = 0;
+        var t = setInterval(function () {
+          display.textContent = email.split('').map(function (c, n) { return n <= i ? c : rand(); }).join('');
+          if (i++ >= email.length) { clearInterval(t); finish(); }
+        }, 30);
+      });
+    })();
+  </script>
 </body>
 </html>
