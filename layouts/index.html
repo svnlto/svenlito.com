@@ -122,7 +122,7 @@
           <dt>{{ .label }}</dt>
           <dd>
             {{- if .obfuscate -}}
-              <button class="email-btn" id="email-btn" title="Click to reveal email"><span id="email-display"></span></button><span class="hint" id="email-hint">(click to reveal)</span>
+              <button class="email-btn" id="email-btn" title="Click to reveal email" aria-label="Reveal email address"><span id="email-display"></span></button><span class="hint" id="email-hint">(click to reveal)</span>
             {{- else if .href -}}
               <a href="{{ .href | safeURL }}">{{ .value }}</a>
             {{- else -}}{{ .value }}{{- end -}}
@@ -131,7 +131,7 @@
         {{ end }}
       </dl>
       <div class="availability">
-        <span class="avail-text"><span class="dot">●</span> {{ .availability.text }}</span>
+        <span class="avail-text"><span class="dot" aria-hidden="true">●</span> {{ .availability.text }}</span>
         <span class="avail-loc">{{ .availability.locations }}</span>
       </div>
     </header>
@@ -193,7 +193,7 @@
       var display = document.getElementById('email-display');
       var btn = document.getElementById('email-btn');
       var hint = document.getElementById('email-hint');
-      if (!display || !btn) return;
+      if (!display || !btn || !hint) return;
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       function rand() { return String.fromCharCode(33 + Math.floor(Math.random() * 94)); }
       function scramble(str) { return str.split('').map(function (c) { return (c === '@' || c === '.') ? c : rand(); }).join(''); }
