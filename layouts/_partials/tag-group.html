@@ -1,0 +1,7 @@
+<div class="tg">
+  <p class="tg-heading">{{ .heading }}</p>
+  <p class="tg-sub">{{ .sublabel }}</p>
+  <div class="tg-pills">
+    {{ range .tags }}<span class="pill">{{ . }}</span>{{ end }}
+  </div>
+</div>

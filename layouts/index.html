@@ -87,6 +87,11 @@
     .oss-role { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; margin-bottom: 0.35rem; }
     .oss-line { font-family: var(--sans); font-size: 14px; line-height: 1.55; color: var(--ink-body); }
     .oss-name { font-weight: 700; color: var(--ink); }
+    .tg { margin-bottom: 1.6rem; }
+    .tg-heading { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: var(--ink); text-transform: uppercase; }
+    .tg-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; color: var(--meta); margin: 0.2rem 0 0.7rem; }
+    .tg-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .pill { font-family: var(--mono); font-size: 12px; color: var(--ink); background: var(--pill); border: 1px solid var(--hairline); border-radius: 6px; padding: 0.3rem 0.6rem; letter-spacing: 0.02em; }
   </style>
 </head>
 <body>
@@ -147,6 +152,12 @@
     <section class="section" id="community">
       {{ partial "section-header.html" (dict "marker" "05" "label" "Community" "title" "OPEN SOURCE CONTRIBUTIONS" "annotation" .annotation) }}
       {{ range .items }}{{ partial "oss-entry.html" . }}{{ end }}
+    </section>
+    {{ end }}
+    {{ with hugo.Data.cv.stack }}
+    <section class="section" id="stack">
+      {{ partial "section-header.html" (dict "marker" "06" "label" "Stack" "title" "TECHNICAL EXPERTISE" "annotation" .annotation) }}
+      {{ range .groups }}{{ partial "tag-group.html" . }}{{ end }}
     </section>
     {{ end }}
   </main>
