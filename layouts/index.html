@@ -82,6 +82,11 @@
     .er-years { font-family: var(--mono); font-size: 11px; color: var(--meta); }
     .er-title { font-family: var(--serif); font-variation-settings: 'opsz' 24, 'wght' 400; font-size: 1.2rem; color: var(--ink); margin: 0.25rem 0; }
     .er-org { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--meta); }
+    .oss { padding: 0.85rem 0; border-bottom: 1px solid var(--hairline); }
+    .oss:last-child { border-bottom: 0; }
+    .oss-role { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; margin-bottom: 0.35rem; }
+    .oss-line { font-family: var(--sans); font-size: 14px; line-height: 1.55; color: var(--ink-body); }
+    .oss-name { font-weight: 700; color: var(--ink); }
   </style>
 </head>
 <body>
@@ -136,6 +141,12 @@
     <section class="section" id="earlier">
       {{ partial "section-header.html" (dict "marker" "04" "label" "Earlier" "title" "PREVIOUS HISTORY" "annotation" .annotation) }}
       {{ range .items }}{{ partial "earlier-role.html" . }}{{ end }}
+    </section>
+    {{ end }}
+    {{ with hugo.Data.cv.community }}
+    <section class="section" id="community">
+      {{ partial "section-header.html" (dict "marker" "05" "label" "Community" "title" "OPEN SOURCE CONTRIBUTIONS" "annotation" .annotation) }}
+      {{ range .items }}{{ partial "oss-entry.html" . }}{{ end }}
     </section>
     {{ end }}
   </main>
