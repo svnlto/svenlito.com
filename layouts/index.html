@@ -42,11 +42,45 @@
     :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
     .rule { border: 0; border-top: 1px solid var(--hairline); margin: 0.75rem 0 1.25rem; }
     @media (max-width: 520px) { .wrap { padding: 2.5rem 1.25rem 3.5rem; } }
+    .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--meta); text-transform: uppercase; }
+    .wordmark { font-family: var(--serif); font-variation-settings: 'opsz' 144, 'wght' 500; font-size: clamp(3rem, 9vw, 4.25rem); line-height: 1; color: var(--ink); margin: 1.25rem 0 1rem; letter-spacing: -0.01em; }
+    .wordmark .accent { color: var(--teal); font-style: oblique 10deg; }
+    .subtitle { font-family: var(--sans); font-weight: 500; font-size: 1.05rem; color: var(--ink); }
+    .tagline { font-family: var(--serif); font-variation-settings: 'opsz' 36, 'wght' 400; font-style: oblique 10deg; font-size: 1.05rem; color: var(--ink-body); margin-top: 0.35rem; }
+    .contacts { display: grid; gap: 0.35rem; margin: 1.75rem 0; font-family: var(--mono); font-size: 12px; }
+    .contact { display: grid; grid-template-columns: 3.5rem 1fr; align-items: baseline; }
+    .contact dt { color: var(--meta); letter-spacing: 0.1em; }
+    .contact dd { color: var(--ink); }
+    .availability { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ink); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 0.65rem 0; margin-top: 1.5rem; }
+    .availability .dot { color: var(--teal); }
+    .availability .avail-loc { color: var(--meta); }
   </style>
 </head>
 <body>
   <main class="wrap">
-    {{/* sections added in later tasks */}}
+    {{ with hugo.Data.cv.header }}
+    <header class="masthead">
+      <p class="eyebrow">{{ .eyebrow }}</p>
+      <h1 class="wordmark">{{ .wordmark.lead }} <span class="accent">{{ .wordmark.accent }}</span></h1>
+      <p class="subtitle">{{ .subtitle }}</p>
+      <p class="tagline">{{ .tagline }}</p>
+      <dl class="contacts">
+        {{ range .contacts }}
+        <div class="contact">
+          <dt>{{ .label }}</dt>
+          <dd>
+            {{- if .href }}<a href="{{ .href | safeURL }}">{{ .value }}</a>
+            {{- else }}{{ .value }}{{ end -}}
+          </dd>
+        </div>
+        {{ end }}
+      </dl>
+      <div class="availability">
+        <span class="avail-text"><span class="dot">●</span> {{ .availability.text }}</span>
+        <span class="avail-loc">{{ .availability.locations }}</span>
+      </div>
+    </header>
+    {{ end }}
   </main>
   <footer class="wrap" style="padding-top:0"><!-- footer added in Task 12 --></footer>
 </body>
