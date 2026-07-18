@@ -92,6 +92,11 @@
     .tg-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; color: var(--meta); margin: 0.2rem 0 0.7rem; }
     .tg-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .pill { font-family: var(--mono); font-size: 12px; color: var(--ink); background: var(--pill); border: 1px solid var(--hairline); border-radius: 6px; padding: 0.3rem 0.6rem; letter-spacing: 0.02em; }
+    .cg { margin-bottom: 1.3rem; }
+    .cg-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cg-items { font-family: var(--sans); font-size: 14px; line-height: 1.7; color: var(--ink); }
+    .cg-name { font-weight: 500; }
+    .cg-meta { font-family: var(--mono); font-size: 11px; color: var(--meta); }
   </style>
 </head>
 <body>
@@ -158,6 +163,12 @@
     <section class="section" id="stack">
       {{ partial "section-header.html" (dict "marker" "06" "label" "Stack" "title" "TECHNICAL EXPERTISE" "annotation" .annotation) }}
       {{ range .groups }}{{ partial "tag-group.html" . }}{{ end }}
+    </section>
+    {{ end }}
+    {{ with hugo.Data.cv.learning }}
+    <section class="section" id="learning">
+      {{ partial "section-header.html" (dict "marker" "07" "label" "Learning" "title" "CERTIFICATIONS & EDUCATION" "annotation" .annotation) }}
+      {{ range .groups }}{{ partial "cert-group.html" . }}{{ end }}
     </section>
     {{ end }}
   </main>

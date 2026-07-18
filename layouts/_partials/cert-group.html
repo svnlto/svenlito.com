@@ -1,0 +1,6 @@
+<div class="cg">
+  <p class="cg-label">{{ .label }}</p>
+  <p class="cg-items">
+    {{ range $i, $it := .items }}{{ if $i }} · {{ end }}<span class="cg-name">{{ $it.name }}</span> <span class="cg-meta">— {{ $it.meta }}</span>{{ end }}
+  </p>
+</div>
