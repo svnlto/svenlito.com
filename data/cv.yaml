@@ -1,0 +1,145 @@
+header:
+  eyebrow: "CURRICULUM VITAE / 2026 / OPEN TO ROLES"
+  wordmark: { lead: "Sven", accent: "Lito" }
+  subtitle: "Engineering leadership · hands-on platform & cloud"
+  tagline: "Director-level by experience. Happy to lead, happy to build."
+  contacts:
+    - { label: "EMAIL", value: "me@svenlito.com", href: "mailto:me@svenlito.com", obfuscate: true }
+    - { label: "TEL", value: "+66 994 324 023", href: "tel:+66994324023" }
+    - { label: "BASE", value: "Munich → Bangkok" }
+    - { label: "WEB", value: "svenlito.com", href: "https://svenlito.com" }
+  availability:
+    text: "OPEN TO ENGINEERING LEADERSHIP AND SENIOR PLATFORM ROLES"
+    locations: "BANGKOK · APAC · EU · REMOTE"
+
+profile:
+  annotation: "Engineering leadership since 1999."
+  quote: "Engineering leader with two decades of experience building cloud platforms and the teams that run them — comfortable in the org chart and comfortable in a terminal."
+  body: "Deep, current expertise across AWS, GCP & Azure, infrastructure as code, DevSecOps, and platform engineering. I've led organisations as Director and Head of Engineering, and I'm equally happy in a senior individual-contributor or staff platform role. The work matters more than the title — what I look for is a team that takes craft seriously and a problem worth solving."
+
+capabilities:
+  annotation: "Calibrated against recent work."
+  skills:
+    - { name: "Team Leadership & Scaling", level: 1.0 }
+    - { name: "Cloud Architecture (AWS / GCP / Azure)", level: 1.0 }
+    - { name: "DevSecOps Implementation", level: 1.0 }
+    - { name: "Platform Engineering", level: 1.0 }
+    - { name: "Strategic Planning", level: 0.8 }
+    - { name: "Cost Optimization", level: 1.0 }
+    - { name: "Zero Trust Security", level: 0.8 }
+    - { name: "Infrastructure as Code", level: 1.0 }
+
+experience:
+  items:
+    - dates: "Mar 2026 — Present"
+      present: true
+      location: "ISMANING / DE · HYBRID"
+      title: "Lead IT Consultant"
+      company: "MSG SERVICES GMBH"
+      descriptor: "ENTERPRISE IT CONSULTING"
+      body:
+        - "Building and operating an internal Platform-as-a-Service — codifying the cloud estate as Infrastructure as Code, designing the developer platform, and shaping the delivery pipelines that engineering teams across the organisation depend on."
+        - "Hands-on across Terraform, Kubernetes, and CI/CD foundations, with a focus on operating model, governance, and DevSecOps maturity inside a regulated enterprise environment."
+    - dates: "Apr 2025 — Mar 2026"
+      location: "LONDON / UK · REMOTE"
+      title: "Managing Director"
+      accent: "Founder"
+      company: "TROPOSPHERE"
+      descriptor: "DEVOPS CONSULTANCY"
+      body:
+        - "Founded and operated a DevOps consultancy helping organisations modernise cloud infrastructure and engineering practices — service offerings rooted in AWS / GCP, platform engineering, IaC, and DevSecOps transformation across fintech, e-commerce, and SaaS clients before transitioning the practice in early 2026."
+    - dates: "Mar 2024 — Nov 2024"
+      location: "BANGKOK / TH"
+      title: "Senior DevSecOps Engineer"
+      company: "SNOCKO"
+      descriptor: "CLOUD SECURITY"
+      body:
+        - "Led cloud security and infrastructure transformation on AWS — architected an account strategy following the Well-Architected Framework, implemented zero-trust identity and network segmentation across 50+ microservices, and rolled out Okta SSO to 200+ users. Materially reduced security incidents and infrastructure costs."
+    - dates: "Aug 2023 — Dec 2023"
+      location: "BANGKOK / TH"
+      title: "Developer Productivity Lead"
+      company: "VEVE"
+      descriptor: "DIGITAL COLLECTIBLES"
+      body:
+        - "Established a Developer Productivity strategy that materially increased team velocity in four months. Built a self-service infrastructure platform on the HashiCorp stack (Terraform, Consul, Nomad), enabling five development teams to provision infrastructure autonomously — reducing provisioning from days to minutes."
+    - dates: "Oct 2020 — Aug 2023"
+      location: "BANGKOK / TH"
+      title: "Head of Engineering"
+      company: "POMELO FASHION"
+      descriptor: "ASIA-LEADING FASHION TECH"
+      body:
+        - "Led a diverse engineering organisation across multiple specialised teams through a sustained period of growth. Implemented an OKR framework that moved reliability, deployment cadence, and recovery time in the right direction, and established an engineering culture through structured mentorship, technical guilds, continuous deployment, IaC, and comprehensive observability."
+        - "Led architectural work across data and ML — ingestion pipelines on AWS Glue and Lake Formation, modernised with Dagster, Airbyte, and dbt; end-to-end ML infrastructure streamlining data science workflows from local development to production inference."
+    - dates: "Nov 2019 — Oct 2020"
+      location: "BANGKOK / TH"
+      title: "Director of Engineering"
+      company: "POMELO FASHION"
+      descriptor: "ASIA-LEADING FASHION TECH"
+      body:
+        - "Introduced DevOps culture and practices across the engineering organisation — lifting deployment from a monthly cadence to ordinary daily work, with production incidents falling alongside. Built and launched a dedicated platform engineering team whose shared services and internal tooling accelerated feature delivery across product teams."
+    - dates: "Apr 2019 — Jul 2019"
+      location: "BANGKOK / TH"
+      title: "Principal Software Developer"
+      company: "NIMBLE"
+      descriptor: "LOYALTY PLATFORMS"
+      body:
+        - "Led the architecture and technical design of a client loyalty platform, translating business requirements into scalable technical solutions and executing a Ruby-on-Rails-to-cloud-native migration that improved reliability and reduced operational overhead."
+    - dates: "Jan 2018 — Jul 2018"
+      location: "BANGKOK / TH"
+      title: "Lead Software Developer"
+      company: "GUARDRAILS"
+      descriptor: "APPLICATION SECURITY"
+      body:
+        - "Designed security-scanning microservices that processed large volumes of repositories daily across GitHub, GitLab, and Bitbucket — optimised through caching, parallelism, and efficient data structures so detection happened in seconds rather than hours."
+
+earlier:
+  annotation: "From systems administration to architecture."
+  items:
+    - { years: "2016 — 2018", title: "Technology Specialist & Team Lead", org: "MCKINSEY & CO", location: "JAKARTA" }
+    - { years: "2014 — 2016", title: "Software Architect", org: "MCKINSEY DIGITAL LABS", location: "BERLIN" }
+    - { years: "2012 — 2014", title: "DevOps Engineer", org: "TELEKOM INNOVATION LABS", location: "BERLIN" }
+    - { years: "2008 — 2012", title: "Senior JavaScript Developer", org: "VARIOUS COMPANIES", location: "LONDON / BERLIN" }
+    - { years: "1999 — 2008", title: "Systems Administrator", org: "MUNICH RE GROUP, UPS", location: "MUNICH" }
+
+community:
+  annotation: "Selected, maintained, or co-created."
+  items:
+    - { role: "CREATOR · MAINTAINER", name: "terraform-aws-eventbridge", desc: "official module under terraform-aws-modules. Simplifies AWS EventBridge resource management and is widely adopted across the Terraform community." }
+    - { role: "CORE CONTRIBUTOR", name: "Formidable (node-formidable)", desc: "one of the most widely-used Node.js libraries for parsing multipart form data, with 13M+ weekly downloads." }
+    - { role: "CONTRIBUTOR", name: "Apache CouchDB Nano", desc: "the official Apache CouchDB client library for Node.js." }
+    - { role: "CORE TEAM", name: "Hoodie", desc: "offline-first JavaScript backend framework that pioneered the \"no-backend\" movement." }
+
+stack:
+  annotation: "Tools used in production at scale."
+  groups:
+    - heading: "CLOUD & INFRASTRUCTURE"
+      sublabel: "AWS · GCP · AZURE · IAC"
+      tags: ["AWS","EC2","ECS","EKS","Lambda","RDS","S3","CloudFormation","IAM","VPC","GCP","GKE","Cloud Run","BigQuery","Pub/Sub","Azure","AKS","Azure DevOps","Terraform","Pulumi","Kubernetes","Docker","Nomad"]
+    - heading: "DEVSECOPS & AUTOMATION"
+      sublabel: "CI/CD · SECURITY · OBSERVABILITY"
+      tags: ["GitHub Actions","GitLab CI","Jenkins","ArgoCD","Zero Trust","OWASP","HashiCorp Vault","Okta","Datadog","Prometheus","Grafana","ELK","Istio","Consul"]
+    - heading: "DEVELOPMENT"
+      sublabel: "LANGUAGES · FRAMEWORKS · DATA"
+      tags: ["JavaScript / TypeScript","Go","Python","Ruby","Node.js","React","Next.js","FastAPI","Rails","PostgreSQL","MySQL","MongoDB","Redis","Kafka","Microservices","Event-Driven","Serverless","Temporal"]
+    - heading: "DATA & ML INFRASTRUCTURE"
+      sublabel: "INGEST · TRANSFORM · MLOPS"
+      tags: ["AWS Glue","Lake Formation","Airbyte","dbt","Dagster","ML Pipelines","Inference Infra","Warehouse Tuning"]
+
+learning:
+  annotation: "Continuous practice. Always shipping."
+  groups:
+    - label: "AI & DEVELOPMENT"
+      items:
+        - { name: "Building with the Claude API", meta: "Anthropic, 2025" }
+        - { name: "Claude Code in Action", meta: "Anthropic, 2025" }
+        - { name: "Model Context Protocol: Introduction & Advanced Topics", meta: "Anthropic, 2025" }
+        - { name: "HashiCorp Certified: Terraform Associate", meta: "2021" }
+    - label: "DATA ENGINEERING"
+      items:
+        - { name: "The Complete dbt Bootcamp", meta: "Udemy, 2022" }
+        - { name: "Data Engineering with Python", meta: "DataCamp, 2022–2023" }
+    - label: "CONTINUOUS LEARNING"
+      items:
+        - { name: "Advanced Node.js, TypeScript, Vue.js", meta: "LinkedIn Learning, 2019" }
+        - { name: "Web Development with Elixir & Advanced OTP", meta: "Udemy, 2019" }
+        - { name: "Harvard Extension School — CS50 Courses", meta: "2008" }
