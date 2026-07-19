@@ -4,6 +4,10 @@ title = "Sven Lito"
 
 [taxonomies]
 
+[params]
+  # Cloudflare Web Analytics (cookieless). Paste the beacon token to enable.
+  cloudflareAnalyticsToken = "429cff591de7443bad1589055328464f"
+
 [build]
   writeStats = false
 
