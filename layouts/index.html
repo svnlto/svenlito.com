@@ -111,6 +111,30 @@
       .availability { font-size: 10px; }
       .contact { grid-template-columns: 3rem 1fr; }
     }
+    @page { size: A4; margin: 14mm 15mm; }
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      html, body { background: var(--bg); font-size: 13px; line-height: 1.4; }
+      .wrap { max-width: none; padding: 0; }
+      .no-print, .hint { display: none !important; }
+      a { text-decoration: none; }
+      .section { margin-top: 1.1rem; }
+      .rule { margin: 0.5rem 0 0.8rem; }
+      .contacts { margin: 1rem 0; }
+      .availability { margin-top: 1rem; padding: 0.45rem 0; }
+      .pull-quote { font-size: 1.25rem; line-height: 1.25; margin-bottom: 0.7rem; }
+      .body { font-size: 13px; line-height: 1.45; }
+      .xp { padding: 0.75rem 0; }
+      .xp-title { font-size: 1.2rem; }
+      .xp .body + .body { margin-top: 0.4rem; }
+      .er { padding: 0.5rem 0; }
+      .oss { padding: 0.5rem 0; }
+      .skill-row { padding: 0.4rem 0; }
+      .tg { margin-bottom: 0.9rem; }
+      .cg { margin-bottom: 0.8rem; }
+      .section-title, .xp-title, .er-title, h1, h2, h3 { break-after: avoid; }
+      .xp, .er, .oss, .tg, .cg, .skill-row, .cert-group { break-inside: avoid; }
+    }
   </style>
 </head>
 <body>
@@ -123,11 +147,13 @@
       <p class="tagline">{{ .tagline }}</p>
       <dl class="contacts">
         {{ range .contacts }}
-        <div class="contact">
+        <div class="contact{{ if .download }} no-print{{ end }}">
           <dt>{{ .label }}</dt>
           <dd>
             {{- if .obfuscate -}}
               <button class="email-btn" id="email-btn" title="Click to reveal email" aria-label="Reveal email address"><span id="email-display"></span></button><span class="hint" id="email-hint">(click to reveal)</span>
+            {{- else if .download -}}
+              <a href="{{ .href | safeURL }}" download>{{ .value }}</a>
             {{- else if .href -}}
               <a href="{{ .href | safeURL }}">{{ .value }}</a>
             {{- else -}}{{ .value }}{{- end -}}
@@ -209,6 +235,8 @@
         btn.replaceWith(link);
       }
       display.textContent = scramble(email);
+      // PDF export loads with ?pdf — show the real address so the generated CV isn't scrambled
+      if (new URLSearchParams(location.search).has('pdf')) { display.textContent = email; finish(); return; }
       var revealed = false;
       btn.addEventListener('click', function () {
         if (revealed) return; revealed = true;

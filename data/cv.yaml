@@ -8,6 +8,7 @@ header:
     - { label: "TEL", value: "+66 994 324 023", href: "tel:+66994324023" }
     - { label: "BASE", value: "Munich → Bangkok" }
     - { label: "WEB", value: "svenlito.com", href: "https://svenlito.com" }
+    - { label: "PDF", value: "Download CV", href: "/sven-lito-cv.pdf", download: true }
   availability:
     text: "OPEN TO ENGINEERING LEADERSHIP AND SENIOR PLATFORM ROLES"
     locations: "BANGKOK · APAC · EU · REMOTE"
