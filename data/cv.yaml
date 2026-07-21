@@ -40,6 +40,7 @@ experience:
       body:
         - "Building and operating an internal Platform-as-a-Service — codifying the cloud estate as Infrastructure as Code, designing the developer platform, and shaping the delivery pipelines that engineering teams across the organisation depend on."
         - "Hands-on across Terraform, Kubernetes, and CI/CD foundations, with a focus on operating model, governance, and DevSecOps maturity inside a regulated enterprise environment."
+        - "Authored the platform's SRE and observability strategy on Datadog — SLOs, error budgets, and incident response."
     - dates: "Apr 2025 — Mar 2026"
       location: "LONDON / UK · REMOTE"
       title: "Managing Director"
