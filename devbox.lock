@@ -5,7 +5,7 @@
       "last_modified": "2026-07-18T04:06:47Z",
       "resolved": "github:NixOS/nixpkgs/31cd72fdba8fa052e437ce7e6879c4fe62def10f?lastModified=1784347607&narHash=sha256-VI5cdo27nEZ3m1SlgB8RvBbrqFUO2%2FdUgrrLWe407oA%3D"
     },
-    "hugo@latest": {
+    "hugo@0.164.0": {
       "last_modified": "2026-07-14T18:49:32Z",
       "resolved": "github:NixOS/nixpkgs/3889d66586e664adc76aa5c242331d3d71786187#hugo",
       "source": "devbox-search",
@@ -43,7 +43,7 @@
         }
       }
     },
-    "just@latest": {
+    "just@1.56.0": {
       "last_modified": "2026-07-14T18:49:32Z",
       "resolved": "github:NixOS/nixpkgs/3889d66586e664adc76aa5c242331d3d71786187#just",
       "source": "devbox-search",
@@ -147,7 +147,7 @@
         }
       }
     },
-    "pre-commit@latest": {
+    "pre-commit@4.5.1": {
       "last_modified": "2026-07-16T04:38:10Z",
       "resolved": "github:NixOS/nixpkgs/6368bc923cec55a5f78960ade0cb4dd99580e087#pre-commit",
       "source": "devbox-search",

@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.5/.schema/devbox.schema.json",
   "packages": [
     "nodejs@26.5.0",
-    "just@latest",
-    "pre-commit@latest",
-    "hugo@latest"
+    "just@1.56.0",
+    "pre-commit@4.5.1",
+    "hugo@0.164.0"
   ],
   "shell": {
     "init_hook": [
